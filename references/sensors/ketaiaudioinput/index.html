@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="description"><meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/styles/html5reset.css" media="all">
+    <link rel="stylesheet" href="/assets/styles/responsivegridsystem.css" media="all">
+    <link rel="stylesheet" href="/assets/styles/col.css" media="all">
+    <link rel="stylesheet" href="/assets/styles/2cols.css" media="all">
+    <link rel="stylesheet" href="/assets/styles/3cols.css" media="all">
+    <link rel="stylesheet" href="/assets/styles/4cols.css" media="all">
+    <link rel="stylesheet" href="/assets/styles/5cols.css" media="all">
+    <link rel="stylesheet" href="/assets/styles/6cols.css" media="all">
+    <link rel="stylesheet" href="/assets/styles/7cols.css" media="all">
+    <link rel="stylesheet" href="/assets/styles/8cols.css" media="all">
+    <link rel="stylesheet" href="/assets/styles/9cols.css" media="all">
+    <link rel="stylesheet" href="/assets/styles/10cols.css" media="all">
+    <link rel="stylesheet" href="/assets/styles/11cols.css" media="all">
+    <link rel="stylesheet" href="/assets/styles/12cols.css" media="all">
+    <!-- Responsive Stylesheets -->
+    <link rel="stylesheet" media="only screen and (max-width: 1024px) and (min-width: 769px)" href="/assets/styles/1024.css">
+    <link rel="stylesheet" media="only screen and (max-width: 768px) and (min-width: 481px)" href="/assets/styles/768.css">
+    <link rel="stylesheet" media="only screen and (max-width: 480px)" href="/assets/styles/480.css">
+    <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements and feature detects -->
+    <script src="/assets/scripts/modernizr-2.5.3-min.js"></script><link rel="stylesheet" type="text/css" href="/assets/styles/menu_sideslide.css" />
+    <link rel="stylesheet" href="/assets/lib/codemirror.css">
+    <link rel="stylesheet" href="/assets/theme/midnight.css">
+    <script type="text/javascript" src="/assets/lib/codemirror.js"></script>
+    <script type="text/javascript" src="/assets/mode/javascript/javascript.js"></script>
+    <script type="text/javascript" src="/assets/addon/selection/active-line.js"></script>
+    <script type="text/javascript" src="/assets/addon/edit/matchbrackets.js"></script>
+    <link rel="stylesheet" href="/assets/styles/custom_code.css">
+    <title>Ketai Library - Ketai Camera</title>
+  </head>
+</html>
+<body>
+<div class="menu-wrap">
+  <nav class="menu">
+    <div class="icon-list">
+<ul class="menu">
+  <li><a href="/about/">About</a></li>
+  <li><a href="/get-started/">Get Started</a></li>
+  <li><a href="/projects/">Examples</a></li>
+  <li><a href="/references/">Reference</a></li><br/><br/>
+  <li><a href="https://github.com/ketai/library">Github</a></li>
+  <li><a href="https://github.com/ketai/ketaiLibrary.org/issues">Forum</a></li>
+  <li><a href="https://twitter.com/ketailibrary">Twitter</a></li>
+</ul>
+    </div>
+  </nav>
+  <button id="close-button" class="close-button">Close Menu</button>
+</div>
+<button id="open-button" class="menu-button">Open Menu</button>
+<div class="title">
+  <nav class="menu"></nav>
+</div>
+  <div id="wrapper">
+    <div class="title">
+      <h2>Ketai</h2>
+    </div>
+    <div id="maincontentcontainer">
+      <div class="maincontent">
+        <div class="section group">
+          <div class="col span_1_of_6 menubar"><img src="/assets/images/logo.png">
+<ul class="menu">
+  <li><a href="/about/">About</a></li>
+  <li><a href="/get-started/">Get Started</a></li>
+  <li><a href="/projects/">Examples</a></li>
+  <li><a href="/references/">Reference</a></li><br/><br/>
+  <li><a href="https://github.com/ketai/library">Github</a></li>
+  <li><a href="https://github.com/ketai/ketaiLibrary.org/issues">Forum</a></li>
+  <li><a href="https://twitter.com/ketailibrary">Twitter</a></li>
+</ul>
+            <hr>
+<h4><b>Other Packages:</b></h4>
+<ul class="sidelist">
+  <li><a href="/references/camera/">Camera</a></li>
+  <li><a href="/references/cv/">CV</a></li>
+  <li><a href="/references/data/">Data</a></li>
+  <li><a href="/references/net/">Net</a></li>
+  <li><a href="/references/netbluetooth/">Net Bluetooth</a></li>
+  <li><a href="/references/netnfc/">Net NFC</a></li>
+  <li><a href="/references/sensors/">Sensors</a></li>
+  <li><a href="/references/test/">Test</a></li>
+  <li><a href="/references/ui/">UI</a></li>
+</ul>
+          </div>
+          <div class="col span_3_of_6 reference">
+            <h3>Reference</h3><h4 id="heading-javadoc-to-md-">Heading (Javadoc to MD)</h4>
+<h5 id="-function-myfunc-int-one-string-two-object-three-"><code>function myFunc(int one, String two, Object... three)</code></h5>
+<p>This is an exemplary description and there should be no line break before this line. </p>
+<p>But in front of this line, there should be a line break because we interpret the double newline in the source as one. </p>
+<p>The single p-tag should force this to be preceded by a line break as well. </p>
+<p>Wrapping in p-tags with closing tag should be possible, too, and make no difference to the single p-tag ... </p>
+<p>Except for this text which will have a line break before, of course.</p>
+<ul>
+<li><strong>Parameters:</strong><ul>
+<li><code>one</code> — the first parameter (type is always inferred)</li>
+<li><code>two</code> — the second parameter (type is always inferred)</li>
+<li><code>three</code> — the third parameter (type is always inferred)</li>
+</ul>
+</li>
+<li><strong>Returns:</strong> some arbitrary return value (with inferred type)</li>
+<li><strong>Author:</strong><ul>
+<li>John Doe (john.doe@example.org)</li>
+<li>Jane Doe (@jane)</li>
+</ul>
+</li>
+<li><strong>License:</strong> GPL</li>
+<li><strong>Since:</strong> 1.0</li>
+<li><strong>See also:</strong> otherFunc</li>
+</ul>
+<h5 id="-public-class-myclass-"><code>public class MyClass</code></h5>
+<p>You can document classes as well (and docs may have wrong indentation)</p>
+<h5 id="-private-static-object-boringfunc-"><code>private static Object boringFunc()</code></h5>
+<p>The description may even be single-line and followed by a blank line</p>
+<h5 id="-string-privatevariable-"><code>String privateVariable = &quot;&quot;</code></h5>
+<ul>
+<li><strong>Private</strong></li>
+</ul>
+<img src="/assets/thumbnails/c28999b8720ff54ac69a95bd03d4cfc0.jpg" width="700" height="481"></img>
+<div class="description"><p>These are <strong>trees</strong>. You can create image captions by placing text files named &quot;imagename + .md&quot; in the same folder.</p>
+
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+      lineNumbers: true,
+      styleActiveLine: true,
+      matchBrackets: true
+    });
+    editor.setOption("theme", "midnight");
+    
+  </script><script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/assets/scripts/jquery-1.7.2.min.js"><\/script>')</script>
+  <script src="/assets/scripts/classie.js"></script>
+  <script src="/assets/scripts/menu.js"></script>
+  <script src="/assets/scripts/responsivegridsystem.js"></script>
+</body>
