@@ -1,2 +1,2 @@
-# ketaiLibrary.github.io
-Static pages hosted at ketaiLibrary.org
+# library.github.io
+Static ketai library reference webpage files hosted at ketai.org
