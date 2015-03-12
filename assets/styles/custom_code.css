@@ -1,13 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
 @font-face {
   font-family: 'mercedes';
-  src: url("../fonts/267E36_0_0.ttf"); /* IE9 Compat Modes */
-  src: url('../fonts/267E36_0_0.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/267E36_0_0.woff') format('woff'), /* Pretty Modern Browsers */
-       url('../fonts/267E36_0_0.ttf')  format('truetype') /* Safari, Android, iOS */      
+  src: url("../fonts/2D9964_0_0.ttf"); /* IE9 Compat Modes */
+  src: url('../fonts/2D9964_0_0.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/2D9964_0_0.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/2D9964_0_0.ttf')  format('truetype') /* Safari, Android, iOS */      
 }
 p{
-	font-size: 1.5em;
+	font-size: 1.4em;
 	line-height: 1.3em;
 	/*font-weight: 300;*/
 	font-family: 'mercedes';
@@ -26,12 +26,12 @@ p{
 	/*padding-left: 20px;*/
 	padding: 0px 20px;
 	position: fixed;
-	width: 190px;
+	width: 200px;
 }
-.menubar img{
+/*.menubar img{
 	padding-bottom: 20px;
 	max-width: 55%;
-}
+}*/
 h1{
 	margin: 0;
 	font-size: 4em;
@@ -80,11 +80,17 @@ h3{
 .reference code{
 	font-size: 1.5em;
 	font-weight: normal;
-	letter-spacing: -0.3px;
+	/*letter-spacing: -0.3px;*/
 	background: rgb(208, 255, 209);
-	color: #0F0F0F;
-	padding: 1px;
+	/*color: #0F0F0F;*/
+	/*padding: 5px 0px;*/
 	word-wrap: break-word;
+	margin-bottom: 20px;
+/*
+	border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	border: 2px solid #ededed;*/
 }
  .codeblock {
 	/*float:right;*/

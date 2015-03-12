@@ -1,10 +1,12 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
+
+
 @font-face {
   font-family: 'mercedes';
-  src: url('../fonts/267E36_0_0.ttf'); /* IE9 Compat Modes */
-  src: url('../fonts/267E36_0_0.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/267E36_0_0.woff') format('woff'), /* Pretty Modern Browsers */
-       url('../fonts/267E36_0_0.ttf')  format('truetype'), /* Safari, Android, iOS */      
+  src: url("../fonts/2D9964_0_0.ttf"); /* IE9 Compat Modes */
+  src: url('../fonts/2D9964_0_0.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/2D9964_0_0.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/2D9964_0_0.ttf')  format('truetype') /* Safari, Android, iOS */      
 }
 html{
 	height: 100%;
@@ -18,7 +20,7 @@ body{
 }
 #wrapper{
 	top: 50%;
-	margin-top: -12%;
+	margin-top: -20%;
 }
 .col{margin-top: 0%;}
 .maincontent{
@@ -54,7 +56,7 @@ ul{
 	float: right;
 }
 li{
-	padding: 3px 5px;
+	padding: 6px 5px;
 	text-align: left;
 }
 h3{
@@ -80,6 +82,12 @@ h2{
 }
 .menu-wrap {
 	background: #0F192A;
+}
+h4{
+	font-family: 'mercedes', sans-serif; 
+	font-weight: 300;
+	font-size: 1.6em;
+	line-height: 1.2em;
 }
 @media only screen and (max-width: 720px) {
 	#wrapper {

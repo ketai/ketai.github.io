@@ -26,12 +26,8 @@
     <link rel="stylesheet" media="only screen and (max-width: 480px)" href="/assets/styles/480.css">
     <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements and feature detects -->
     <script src="/assets/scripts/modernizr-2.5.3-min.js"></script><link rel="stylesheet" type="text/css" href="/assets/styles/menu_sideslide.css" />
-    <link rel="stylesheet" href="/assets/lib/codemirror.css">
-    <link rel="stylesheet" href="/assets/theme/midnight.css">
-    <script type="text/javascript" src="/assets/lib/codemirror.js"></script>
-    <script type="text/javascript" src="/assets/mode/javascript/javascript.js"></script>
-    <script type="text/javascript" src="/assets/addon/selection/active-line.js"></script>
-    <script type="text/javascript" src="/assets/addon/edit/matchbrackets.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/styles/code_block.css" />
     <link rel="stylesheet" href="/assets/styles/code_example.css">
     <title>Ketai Library - WiFi Direct - Remote Cursor</title>
   </head>
@@ -41,13 +37,13 @@
   <nav class="menu">
     <div class="icon-list">
 <ul class="menu">
-  <li><a href="/about/">About</a></li>
-  <li><a href="/get-started/">Get Started</a></li>
-  <li><a href="/projects/">Examples</a></li>
-  <li><a href="/references/">Reference</a></li><br/><br/>
-  <li><a href="https://github.com/ketai/library">Github</a></li>
-  <li><a href="https://github.com/ketai/ketaiLibrary.org/issues">Forum</a></li>
-  <li><a href="https://twitter.com/ketailibrary">Twitter</a></li>
+  <li><a href="/get-started/"><i class="fa fa-circle-thin"> Get Started</i></a></li>
+  <li><a href="/projects/"><i class="fa fa-circle-thin"> Examples</i></a></li>
+  <li><a href="/references/"><i class="fa fa-circle-thin"> Reference</i></a></li>
+  <li><a href="/download/"><i class="fa fa-circle-thin"> Download</i></a></li><br/><br/>
+  <li><a href="https://github.com/ketai/library"><i class="fa fa-github"> Github</i></a></li>
+  <li><a href="https://github.com/ketai/ketaiLibrary.org/issues"><i class="fa fa-comment-o"> Forum</i></a></li>
+  <li><a href="https://twitter.com/ketailibrary"><i class="fa fa-twitter"> Twitter</i></a></li>
 </ul>
     </div>
   </nav>
@@ -64,15 +60,15 @@
     <div id="maincontentcontainer">
       <div class="maincontent">
         <div class="section group">
-          <div class="col span_1_of_6 menubar"><img src="/assets/images/logo.png">
+          <div class="col span_1_of_6 menubar"><img src="/assets/images/logo.svg">
 <ul class="menu">
-  <li><a href="/about/">About</a></li>
-  <li><a href="/get-started/">Get Started</a></li>
-  <li><a href="/projects/">Examples</a></li>
-  <li><a href="/references/">Reference</a></li><br/><br/>
-  <li><a href="https://github.com/ketai/library">Github</a></li>
-  <li><a href="https://github.com/ketai/ketaiLibrary.org/issues">Forum</a></li>
-  <li><a href="https://twitter.com/ketailibrary">Twitter</a></li>
+  <li><a href="/get-started/"><i class="fa fa-circle-thin"> Get Started</i></a></li>
+  <li><a href="/projects/"><i class="fa fa-circle-thin"> Examples</i></a></li>
+  <li><a href="/references/"><i class="fa fa-circle-thin"> Reference</i></a></li>
+  <li><a href="/download/"><i class="fa fa-circle-thin"> Download</i></a></li><br/><br/>
+  <li><a href="https://github.com/ketai/library"><i class="fa fa-github"> Github</i></a></li>
+  <li><a href="https://github.com/ketai/ketaiLibrary.org/issues"><i class="fa fa-comment-o"> Forum</i></a></li>
+  <li><a href="https://twitter.com/ketailibrary"><i class="fa fa-twitter"> Twitter</i></a></li>
 </ul>
             <hr>
 <h4><b>Other Examples:</b></h4>
@@ -87,7 +83,7 @@
   <li><a href="/projects/geolocation/">Geolocation</a></li>
   <li><a href="/projects/gestures/">Gestures</a></li>
   <li><a href="/projects/gyroscope/">Gyroscope</a></li>
-  <li><a href="/projects/locationdistance/">Long Distance</a></li>
+  <li><a href="/projects/locationdistance/">Location Distance</a></li>
   <li><a href="/projects/multiplesensors/">Multiple Sensors</a></li>
   <li><a href="/projects/nfcbeam/">NFC Beam</a></li>
   <li><a href="/projects/nfcread/">NFC Read</a></li>
@@ -97,23 +93,25 @@
   <li><a href="/projects/wifidirect-remotecursor/" class="active">WiFi Direct - Remote Cursor</a></li>
 </ul>
           </div>
-          <div class="col span_3_of_6 reference">
+          <div class="col span_4_of_6 reference">
             <h3>Examples</h3><h4 id="wifi-direct-remote-cursor">WiFi Direct - Remote Cursor</h4>
-<p>WiFiDirect.pde</p>
-<textarea id="code" class="codesnippet">
-import android.os.Bundle;
+<p>This example illustrates the use of WiFi Direct</p>
+<hr>
+<div class="link"><a href="WiFiDirect_remoteCursor.pde"><i class="fa fa-download fa-lg"></i> WiFiDirect_remoteCursor.pde</a></div>
 
-import ketai.net.wifidirect.<em>;
+<pre><code>import android.os.Bundle;
 
-import ketai.net.</em>;
-import ketai.ui.<em>;
-import oscP5.</em>;
-import netP5.<em>;
+import ketai.net.wifidirect.*;
+
+import ketai.net.*;
+import ketai.ui.*;
+import oscP5.*;
+import netP5.*;
 
 KetaiWiFiDirect net;
 
 String info = &quot;&quot;;
-ArrayList<String> devices = new ArrayList();
+ArrayList&lt;String&gt; devices = new ArrayList();
 boolean isConfiguring = true;
 String UIText;
 OscP5 oscP5;
@@ -122,7 +120,8 @@ KetaiList connectionList;
 PVector remoteCursor = new PVector();
 
 void setup()
-{<br>  orientation(PORTRAIT);
+{   
+  orientation(PORTRAIT);
   background(78, 93, 75);
   stroke(255);
   textSize(24);
@@ -183,7 +182,7 @@ void mousePressed()
   //keyboard button -- toggle virtual keyboard
   if (mouseY &lt;= 50 &amp;&amp; mouseX &gt; 0 &amp;&amp; mouseX &lt; width/3)
     KetaiKeyboard.toggle(this);
-  else if (mouseY &lt;= 50 &amp;&amp; mouseX &gt; width/3 &amp;&amp; mouseX &lt; 2</em>(width/3)) //config button
+  else if (mouseY &lt;= 50 &amp;&amp; mouseX &gt; width/3 &amp;&amp; mouseX &lt; 2*(width/3)) //config button
   {
     isConfiguring=true;
   }
@@ -244,12 +243,10 @@ void oscEvent(OscMessage m) {
     }
   }
 }
-</textarea>
+</code></pre><hr>
+<div class="link"><a href="UI.pde"><i class="fa fa-download fa-lg"></i> UI.pde</a></div>
 
-<p><br>
-UI.pde</p>
-<textarea id="inline1" class="codesnippet">
-void drawUI()
+<pre><code>void drawUI()
 {
   //Draw top shelf UI buttons
 
@@ -269,7 +266,8 @@ void drawUI()
   rect(width/3, 0, width/3, 50);
 
   if (!isConfiguring)
-  {<br>    noStroke();
+  {  
+    noStroke();
     fill(78, 93, 75);
   }
   else
@@ -277,12 +275,12 @@ void drawUI()
     fill(0);
     stroke(255);
   }
-  rect((width/3)<em>2, 0, width/3, 50);
+  rect((width/3)*2, 0, width/3, 50);
 
   fill(255);
   text(&quot;Keyboard&quot;, 5, 30); 
   text(&quot;WiFi Direct&quot;, width/3+5, 30); 
-  text(&quot;Interact&quot;, width/3</em>2+5, 30); 
+  text(&quot;Interact&quot;, width/3*2+5, 30); 
 
   popStyle();
 }
@@ -322,56 +320,26 @@ void onKetaiListSelection(KetaiList klist)
   String selection = klist.getSelection();
   println(&quot;CONNECTING FROM LIST TO: &quot; + selection);
   net.connect(selection);
-  //dispose of list for now<br>  connectionList = null;
+  //dispose of list for now  
+  connectionList = null;
 }
-</textarea>
-<br>
-ActivityLifecycle.pde
-<textarea id="inline2" class="codesnippet">
-void onCreate(Bundle savedInstanceState)
+</code></pre><hr>
+<div class="link"><a href="ActivityLifecycle.pde"><i class="fa fa-download fa-lg"></i> ActivityLifecycle.pde</a></div>
+
+<pre><code>void onCreate(Bundle savedInstanceState)
 {
   super.onCreate(savedInstanceState);
 
   if(net == null)
-    net = new KetaiWiFiDirect(this);<br>}
-</textarea>
-
-
-
-<ul>
-<li><strong>Screenshot</strong></li>
-</ul>
-
+    net = new KetaiWiFiDirect(this);    
+}
+</code></pre><!-- * **Screenshot** --><img src="/assets/thumbnails/e29185b3b1dc3cc1d249461e4aeafc85.png" width="480" height="800"></img>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <script type="text/javascript">
-    var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-      lineNumbers: true,
-      styleActiveLine: true,
-      matchBrackets: true
-    });
-    editor.setOption("theme", "midnight");
-    
-    var editor = CodeMirror.fromTextArea(document.getElementById("inline1"), {
-      lineNumbers: true,
-      styleActiveLine: true,
-      matchBrackets: true
-    });
-    editor.setOption("theme", "midnight");
-    
-    var editor = CodeMirror.fromTextArea(document.getElementById("inline2"), {
-      lineNumbers: true,
-      styleActiveLine: true,
-      matchBrackets: true
-    });
-    editor.setOption("theme", "midnight");
-    
-    
-    
-  </script><script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  </div><script src="//cdn.jsdelivr.net/highlight.js/8.4/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script><script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="/assets/scripts/jquery-1.7.2.min.js"><\/script>')</script>
   <script src="/assets/scripts/classie.js"></script>
   <script src="/assets/scripts/menu.js"></script>

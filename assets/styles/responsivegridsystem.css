@@ -81,7 +81,8 @@ font-size : 1em; /* 16 / 16  */ }
 /*  TYPOGRAPHY  ============================================================================= */
 
 p, ol, ul, dl, address { 
-margin-bottom : 1em; 
+/*margin-bottom : 1em; */
+margin-top: .3em;
 font-size : 1em; /* 16 / 16 = 1 */ }
 
 p {
@@ -175,6 +176,11 @@ bottom : -.25em; }
 	}
 
 /* LINKS =============================================================================  */
+.link a{
+	background: rgb(208, 255, 209);
+	font-size: 1.2em;
+	padding: 5px;
+}
 
 a { 
 color : #000;
@@ -186,16 +192,19 @@ text-decoration: none;
 }
 
 a:visited { 
-color : #414042; }
+color : #414042;
+border-bottom: 1px solid #fff; }
 
 a:focus { 
 outline : thin dotted; 
-color : rgb(0,0,0); }
+color : rgb(0,0,0);
+border-bottom: 1px solid #fff; }
 
 a:hover, 
 a:active { 
 outline : 0;
 color : #000;
+border-bottom: 1px solid #fff;
 }
 
 
@@ -762,18 +771,18 @@ html {
 zoom : 1; }
 
 ::-webkit-selection { 
-background : rgb(23,119,175); 
-color : rgb(250,250,250); 
+background : rgb(25, 221, 79);
+color : rgb(255,255,255); 
 text-shadow : none; }
 
 ::-moz-selection { 
-background : rgb(23,119,175); 
-color : rgb(250,250,250); 
+background : rgb(25, 221, 79);
+color : rgb(255,255,255); 
 text-shadow : none; }
 
 ::selection { 
-background : rgb(23,119,175); 
-color : rgb(250,250,250); 
+background : rgb(25, 221, 79);
+color : rgb(255,255,255); 
 text-shadow : none; }
 
 button, 

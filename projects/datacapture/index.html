@@ -26,12 +26,8 @@
     <link rel="stylesheet" media="only screen and (max-width: 480px)" href="/assets/styles/480.css">
     <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements and feature detects -->
     <script src="/assets/scripts/modernizr-2.5.3-min.js"></script><link rel="stylesheet" type="text/css" href="/assets/styles/menu_sideslide.css" />
-    <link rel="stylesheet" href="/assets/lib/codemirror.css">
-    <link rel="stylesheet" href="/assets/theme/midnight.css">
-    <script type="text/javascript" src="/assets/lib/codemirror.js"></script>
-    <script type="text/javascript" src="/assets/mode/javascript/javascript.js"></script>
-    <script type="text/javascript" src="/assets/addon/selection/active-line.js"></script>
-    <script type="text/javascript" src="/assets/addon/edit/matchbrackets.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/styles/code_block.css" />
     <link rel="stylesheet" href="/assets/styles/code_example.css">
     <title>Ketai Library - Data Capture</title>
   </head>
@@ -41,13 +37,13 @@
   <nav class="menu">
     <div class="icon-list">
 <ul class="menu">
-  <li><a href="/about/">About</a></li>
-  <li><a href="/get-started/">Get Started</a></li>
-  <li><a href="/projects/">Examples</a></li>
-  <li><a href="/references/">Reference</a></li><br/><br/>
-  <li><a href="https://github.com/ketai/library">Github</a></li>
-  <li><a href="https://github.com/ketai/ketaiLibrary.org/issues">Forum</a></li>
-  <li><a href="https://twitter.com/ketailibrary">Twitter</a></li>
+  <li><a href="/get-started/"><i class="fa fa-circle-thin"> Get Started</i></a></li>
+  <li><a href="/projects/"><i class="fa fa-circle-thin"> Examples</i></a></li>
+  <li><a href="/references/"><i class="fa fa-circle-thin"> Reference</i></a></li>
+  <li><a href="/download/"><i class="fa fa-circle-thin"> Download</i></a></li><br/><br/>
+  <li><a href="https://github.com/ketai/library"><i class="fa fa-github"> Github</i></a></li>
+  <li><a href="https://github.com/ketai/ketaiLibrary.org/issues"><i class="fa fa-comment-o"> Forum</i></a></li>
+  <li><a href="https://twitter.com/ketailibrary"><i class="fa fa-twitter"> Twitter</i></a></li>
 </ul>
     </div>
   </nav>
@@ -64,15 +60,15 @@
     <div id="maincontentcontainer">
       <div class="maincontent">
         <div class="section group">
-          <div class="col span_1_of_6 menubar"><img src="/assets/images/logo.png">
+          <div class="col span_1_of_6 menubar"><img src="/assets/images/logo.svg">
 <ul class="menu">
-  <li><a href="/about/">About</a></li>
-  <li><a href="/get-started/">Get Started</a></li>
-  <li><a href="/projects/">Examples</a></li>
-  <li><a href="/references/">Reference</a></li><br/><br/>
-  <li><a href="https://github.com/ketai/library">Github</a></li>
-  <li><a href="https://github.com/ketai/ketaiLibrary.org/issues">Forum</a></li>
-  <li><a href="https://twitter.com/ketailibrary">Twitter</a></li>
+  <li><a href="/get-started/"><i class="fa fa-circle-thin"> Get Started</i></a></li>
+  <li><a href="/projects/"><i class="fa fa-circle-thin"> Examples</i></a></li>
+  <li><a href="/references/"><i class="fa fa-circle-thin"> Reference</i></a></li>
+  <li><a href="/download/"><i class="fa fa-circle-thin"> Download</i></a></li><br/><br/>
+  <li><a href="https://github.com/ketai/library"><i class="fa fa-github"> Github</i></a></li>
+  <li><a href="https://github.com/ketai/ketaiLibrary.org/issues"><i class="fa fa-comment-o"> Forum</i></a></li>
+  <li><a href="https://twitter.com/ketailibrary"><i class="fa fa-twitter"> Twitter</i></a></li>
 </ul>
             <hr>
 <h4><b>Other Examples:</b></h4>
@@ -87,7 +83,7 @@
   <li><a href="/projects/geolocation/">Geolocation</a></li>
   <li><a href="/projects/gestures/">Gestures</a></li>
   <li><a href="/projects/gyroscope/">Gyroscope</a></li>
-  <li><a href="/projects/locationdistance/">Long Distance</a></li>
+  <li><a href="/projects/locationdistance/">Location Distance</a></li>
   <li><a href="/projects/multiplesensors/">Multiple Sensors</a></li>
   <li><a href="/projects/nfcbeam/">NFC Beam</a></li>
   <li><a href="/projects/nfcread/">NFC Read</a></li>
@@ -97,11 +93,14 @@
   <li><a href="/projects/wifidirect-remotecursor/">WiFi Direct - Remote Cursor</a></li>
 </ul>
           </div>
-          <div class="col span_3_of_6 reference">
+          <div class="col span_4_of_6 reference">
             <h3>Examples</h3><h4 id="data-capture">Data Capture</h4>
-<textarea id="code" class="codesnippet">
-import ketai.data.<em>;
-import ketai.sensors.</em>;
+<p>This is the example for Data Capture</p>
+<hr>
+<div class="link"><a href="DataCapture.pde"><i class="fa fa-download fa-lg"></i> DataCapture. pde</a></div>
+
+<pre><code>import ketai.data.*;
+import ketai.sensors.*;
 
 KetaiSensor sensor;
 KetaiSQLite db;
@@ -148,14 +147,14 @@ void mousePressed()
   else
     isCapturing = true;
 }
-/<em>
+/*
       collect accelerometer data and save it to the database
-</em>/
+*/
 void onAccelerometerEvent(float x, float y, float z, long time, int accuracy)
 {
   if (db.connect() &amp;&amp; isCapturing)
   {
-    if (!db.execute(&quot;INSERT into data (<code>time</code>,<code>x</code>,<code>y</code>,<code>z</code>) VALUES (&#39;&quot;+System.currentTimeMillis()+&quot;&#39;, &#39;&quot;+x+&quot;&#39;, &#39;&quot;+y+&quot;&#39;, &#39;&quot;+z+&quot;&#39;)&quot;))
+    if (!db.execute(&quot;INSERT into data (`time`,`x`,`y`,`z`) VALUES (&#39;&quot;+System.currentTimeMillis()+&quot;&#39;, &#39;&quot;+x+&quot;&#39;, &#39;&quot;+y+&quot;&#39;, &#39;&quot;+z+&quot;&#39;)&quot;))
       println(&quot;Failed to record data!&quot; );
   }
 }
@@ -166,8 +165,9 @@ void plotData()
   {
     pushStyle();
     noStroke();
-    db.query( &quot;SELECT <em> FROM data ORDER BY time DESC LIMIT &quot; + width );
-    int  i = 0;<br>    long mymin = Long.parseLong(db.getFieldMin(&quot;data&quot;, &quot;time&quot;));
+    db.query( &quot;SELECT * FROM data ORDER BY time DESC LIMIT &quot; + width );
+    int  i = 0;   
+    long mymin = Long.parseLong(db.getFieldMin(&quot;data&quot;, &quot;time&quot;));
     long mymax = Long.parseLong(db.getFieldMax(&quot;data&quot;, &quot;time&quot;));
     while (db.next ())
     {
@@ -193,45 +193,15 @@ void plotData()
 
 long maplong(long value, long istart, long istop, long ostart, long ostop) {
   long divisor = istop - istart;
-  return (ostart + (ostop - ostart) </em> (value - istart) / divisor);
+  return (ostart + (ostop - ostart) * (value - istart) / divisor);
 }
-</textarea>
-
-<p>Test</p>
-<ul>
-<li><strong>Screenshot</strong></li>
-</ul>
-
+</code></pre><img src="/assets/thumbnails/e4b8b2735afcd87d6b1b6673f84c98aa.png" width="800" height="480"></img>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <script type="text/javascript">
-    var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-      lineNumbers: true,
-      styleActiveLine: true,
-      matchBrackets: true
-    });
-    editor.setOption("theme", "midnight");
-    
-    var editor = CodeMirror.fromTextArea(document.getElementById("inline1"), {
-      lineNumbers: true,
-      styleActiveLine: true,
-      matchBrackets: true
-    });
-    editor.setOption("theme", "midnight");
-    
-    var editor = CodeMirror.fromTextArea(document.getElementById("inline2"), {
-      lineNumbers: true,
-      styleActiveLine: true,
-      matchBrackets: true
-    });
-    editor.setOption("theme", "midnight");
-    
-    
-    
-  </script><script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  </div><script src="//cdn.jsdelivr.net/highlight.js/8.4/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script><script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="/assets/scripts/jquery-1.7.2.min.js"><\/script>')</script>
   <script src="/assets/scripts/classie.js"></script>
   <script src="/assets/scripts/menu.js"></script>

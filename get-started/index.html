@@ -25,13 +25,9 @@
     <link rel="stylesheet" media="only screen and (max-width: 480px)" href="/assets/styles/480.css">
     <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements and feature detects -->
     <script src="/assets/scripts/modernizr-2.5.3-min.js"></script><link rel="stylesheet" type="text/css" href="/assets/styles/menu_sideslide.css" />
-    <link rel="stylesheet" href="/assets/lib/codemirror.css">
-    <link rel="stylesheet" href="/assets/theme/midnight.css">
-    <script type="text/javascript" src="/assets/lib/codemirror.js"></script>
-    <script type="text/javascript" src="/assets/mode/javascript/javascript.js"></script>
-    <script type="text/javascript" src="/assets/addon/selection/active-line.js"></script>
-    <script type="text/javascript" src="/assets/addon/edit/matchbrackets.js"></script>
-    <link rel="stylesheet" href="/assets/styles/custom_code.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/styles/code_example.css">
+    <link rel="stylesheet" href="/assets/styles/code_block.css">
     <title>Ketai Library - Get Started</title>
   </head>
 </html>
@@ -40,13 +36,13 @@
   <nav class="menu">
     <div class="icon-list">
 <ul class="menu">
-  <li><a href="/about/">About</a></li>
-  <li><a href="/get-started/" class="current">Get Started</a></li>
-  <li><a href="/projects/">Examples</a></li>
-  <li><a href="/references/">Reference</a></li><br/><br/>
-  <li><a href="https://github.com/ketai/library">Github</a></li>
-  <li><a href="https://github.com/ketai/ketaiLibrary.org/issues">Forum</a></li>
-  <li><a href="https://twitter.com/ketailibrary">Twitter</a></li>
+  <li><a href="/get-started/" class="current"><i class="fa fa-dot-circle-o"> Get Started</i></a></li>
+  <li><a href="/projects/"><i class="fa fa-circle-thin"> Examples</i></a></li>
+  <li><a href="/references/"><i class="fa fa-circle-thin"> Reference</i></a></li>
+  <li><a href="/download/"><i class="fa fa-circle-thin"> Download</i></a></li><br/><br/>
+  <li><a href="https://github.com/ketai/library"><i class="fa fa-github"> Github</i></a></li>
+  <li><a href="https://github.com/ketai/ketaiLibrary.org/issues"><i class="fa fa-comment-o"> Forum</i></a></li>
+  <li><a href="https://twitter.com/ketailibrary"><i class="fa fa-twitter"> Twitter</i></a></li>
 </ul>
     </div>
   </nav>
@@ -63,23 +59,23 @@
     <div id="maincontentcontainer">
       <div class="maincontent">
         <div class="section group">
-          <div class="col span_1_of_6 menubar"><img src="/assets/images/logo.png">
+          <div class="col span_1_of_6 menubar"><a href="/"><img src="/assets/images/logo.svg"></a>
 <ul class="menu">
-  <li><a href="/about/">About</a></li>
-  <li><a href="/get-started/" class="current">Get Started</a></li>
-  <li><a href="/projects/">Examples</a></li>
-  <li><a href="/references/">Reference</a></li><br/><br/>
-  <li><a href="https://github.com/ketai/library">Github</a></li>
-  <li><a href="https://github.com/ketai/ketaiLibrary.org/issues">Forum</a></li>
-  <li><a href="https://twitter.com/ketailibrary">Twitter</a></li>
+  <li><a href="/get-started/" class="current"><i class="fa fa-dot-circle-o"> Get Started</i></a></li>
+  <li><a href="/projects/"><i class="fa fa-circle-thin"> Examples</i></a></li>
+  <li><a href="/references/"><i class="fa fa-circle-thin"> Reference</i></a></li>
+  <li><a href="/download/"><i class="fa fa-circle-thin"> Download</i></a></li><br/><br/>
+  <li><a href="https://github.com/ketai/library"><i class="fa fa-github"> Github</i></a></li>
+  <li><a href="https://github.com/ketai/ketaiLibrary.org/issues"><i class="fa fa-comment-o"> Forum</i></a></li>
+  <li><a href="https://twitter.com/ketailibrary"><i class="fa fa-twitter"> Twitter</i></a></li>
 </ul>
           </div>
-          <div class="col span_3_of_6 reference">
+          <div class="col span_4_of_6 reference">
             <h3>Get Started</h3><h4 id="what-you-need">What You Need</h4>
 <p>To use the library for Processing, make sure your setup meets the following minimum requirements:- <br>
-• <a href="https://processing.org/download/" >Processing 2.06 <a><br>
-• Java 1.6 <br>
-• Android 4.0 Ice Cream Sandwich <br>
+•<a href="https://processing.org/download/">Processing 3.0 (current pre-release is 3.0a5) <i class="fa fa-download"></i></a><br>
+• <a href="http://java.com/en/download/">Java 1.7 (or “Java 7”)<i class="fa fa-download"></i></a><br>
+• <a href="http://developer.android.com/sdk/index.html#Other">Android 4.0 Ice Cream Sandwich</a> <br>
 The newer versions of the requirements will be fine. </p>
 <h4 id="steps">Steps</h4>
 <ol>
@@ -99,15 +95,13 @@ The newer versions of the requirements will be fine. </p>
 <li><p>Launch Processing application. Once it launches an empty sketch window, switch to Android Mode</p>
 </li>
 <li><p>Type the following code in the editor</p>
- <textarea id="inline1" class="codesnippet">
- void setup()
+<pre><code> void setup()
  {
  }
  void draw() {
          ellipse(mouseX, mouseY, mouseX-pmouseX, mouseY-pmouseY);
  }
- </textarea>
-</li>
+</code></pre></li>
 <li><p>Put your Android device in &quot;USB Debugging&quot; via &quot;Developer options&quot;</p>
 </li>
 <li><p>Plug your device into your Desktop and run the sketch from Processing. Your sketch should run on the Android Device.</p>
@@ -122,6 +116,8 @@ The newer versions of the requirements will be fine. </p>
         </div>
       </div>
     </div>
-  </div><script src="/assets/scripts/classie.js"></script>
+  </div><script src="//cdn.jsdelivr.net/highlight.js/8.4/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="/assets/scripts/classie.js"></script>
   <script src="/assets/scripts/menu.js"></script>
 </body>

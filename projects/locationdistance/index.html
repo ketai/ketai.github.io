@@ -26,14 +26,10 @@
     <link rel="stylesheet" media="only screen and (max-width: 480px)" href="/assets/styles/480.css">
     <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements and feature detects -->
     <script src="/assets/scripts/modernizr-2.5.3-min.js"></script><link rel="stylesheet" type="text/css" href="/assets/styles/menu_sideslide.css" />
-    <link rel="stylesheet" href="/assets/lib/codemirror.css">
-    <link rel="stylesheet" href="/assets/theme/midnight.css">
-    <script type="text/javascript" src="/assets/lib/codemirror.js"></script>
-    <script type="text/javascript" src="/assets/mode/javascript/javascript.js"></script>
-    <script type="text/javascript" src="/assets/addon/selection/active-line.js"></script>
-    <script type="text/javascript" src="/assets/addon/edit/matchbrackets.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/styles/code_block.css" />
     <link rel="stylesheet" href="/assets/styles/code_example.css">
-    <title>Ketai Library - Long Distance</title>
+    <title>Ketai Library - Location Distance</title>
   </head>
 </html>
 <body>
@@ -41,13 +37,13 @@
   <nav class="menu">
     <div class="icon-list">
 <ul class="menu">
-  <li><a href="/about/">About</a></li>
-  <li><a href="/get-started/">Get Started</a></li>
-  <li><a href="/projects/">Examples</a></li>
-  <li><a href="/references/">Reference</a></li><br/><br/>
-  <li><a href="https://github.com/ketai/library">Github</a></li>
-  <li><a href="https://github.com/ketai/ketaiLibrary.org/issues">Forum</a></li>
-  <li><a href="https://twitter.com/ketailibrary">Twitter</a></li>
+  <li><a href="/get-started/"><i class="fa fa-circle-thin"> Get Started</i></a></li>
+  <li><a href="/projects/"><i class="fa fa-circle-thin"> Examples</i></a></li>
+  <li><a href="/references/"><i class="fa fa-circle-thin"> Reference</i></a></li>
+  <li><a href="/download/"><i class="fa fa-circle-thin"> Download</i></a></li><br/><br/>
+  <li><a href="https://github.com/ketai/library"><i class="fa fa-github"> Github</i></a></li>
+  <li><a href="https://github.com/ketai/ketaiLibrary.org/issues"><i class="fa fa-comment-o"> Forum</i></a></li>
+  <li><a href="https://twitter.com/ketailibrary"><i class="fa fa-twitter"> Twitter</i></a></li>
 </ul>
     </div>
   </nav>
@@ -64,15 +60,15 @@
     <div id="maincontentcontainer">
       <div class="maincontent">
         <div class="section group">
-          <div class="col span_1_of_6 menubar"><img src="/assets/images/logo.png">
+          <div class="col span_1_of_6 menubar"><img src="/assets/images/logo.svg">
 <ul class="menu">
-  <li><a href="/about/">About</a></li>
-  <li><a href="/get-started/">Get Started</a></li>
-  <li><a href="/projects/">Examples</a></li>
-  <li><a href="/references/">Reference</a></li><br/><br/>
-  <li><a href="https://github.com/ketai/library">Github</a></li>
-  <li><a href="https://github.com/ketai/ketaiLibrary.org/issues">Forum</a></li>
-  <li><a href="https://twitter.com/ketailibrary">Twitter</a></li>
+  <li><a href="/get-started/"><i class="fa fa-circle-thin"> Get Started</i></a></li>
+  <li><a href="/projects/"><i class="fa fa-circle-thin"> Examples</i></a></li>
+  <li><a href="/references/"><i class="fa fa-circle-thin"> Reference</i></a></li>
+  <li><a href="/download/"><i class="fa fa-circle-thin"> Download</i></a></li><br/><br/>
+  <li><a href="https://github.com/ketai/library"><i class="fa fa-github"> Github</i></a></li>
+  <li><a href="https://github.com/ketai/ketaiLibrary.org/issues"><i class="fa fa-comment-o"> Forum</i></a></li>
+  <li><a href="https://twitter.com/ketailibrary"><i class="fa fa-twitter"> Twitter</i></a></li>
 </ul>
             <hr>
 <h4><b>Other Examples:</b></h4>
@@ -87,7 +83,7 @@
   <li><a href="/projects/geolocation/">Geolocation</a></li>
   <li><a href="/projects/gestures/">Gestures</a></li>
   <li><a href="/projects/gyroscope/">Gyroscope</a></li>
-  <li><a href="/projects/locationdistance/" class="active">Long Distance</a></li>
+  <li><a href="/projects/locationdistance/" class="active">Location Distance</a></li>
   <li><a href="/projects/multiplesensors/">Multiple Sensors</a></li>
   <li><a href="/projects/nfcbeam/">NFC Beam</a></li>
   <li><a href="/projects/nfcread/">NFC Read</a></li>
@@ -97,18 +93,22 @@
   <li><a href="/projects/wifidirect-remotecursor/">WiFi Direct - Remote Cursor</a></li>
 </ul>
           </div>
-          <div class="col span_3_of_6 reference">
-            <h3>Examples</h3><h4 id="long-distance">Long Distance</h4>
+          <div class="col span_4_of_6 reference">
+            <h3>Examples</h3><h4 id="location-distance">Location Distance</h4>
 <p>KetaiLocation Features<br>
 &nbsp;- Uses GPS location data (latitude, longitude, altitude (if available)<br>
 &nbsp;- Updates if location changes by 1 meter, or every 10 seconds<br>
 &nbsp;- If unavailable, defaults to system provider (cell tower or WiFi network location)</p>
-<p><textarea id="code" class="codesnippet">
-import ketai.sensors.*; </p>
-<p>double longitude, latitude, altitude, accuracy;
+<hr>
+<div class="link"><a href="LocationDistance.pde"><i class="fa fa-download fa-lg"></i> LocationDistance.pde</a></div>
+
+<pre><code>import ketai.sensors.*; 
+
+double longitude, latitude, altitude, accuracy;
 KetaiLocation location;
-Location uic;</p>
-<p>void setup() {
+Location uic;
+
+void setup() {
   //creates a location object that refers to UIC
   uic = new Location(&quot;uic&quot;); // Example location: the University of Illinois at Chicago
   uic.setLatitude(41.874698);
@@ -116,8 +116,9 @@ Location uic;</p>
   orientation(LANDSCAPE);
   textAlign(CENTER, CENTER);
   textSize(36);
-}</p>
-<p>void draw() {
+}
+
+void draw() {
   background(78, 93, 75);
   if (location.getProvider() == &quot;none&quot;)
     text(&quot;Location data is unavailable. \n&quot; +
@@ -130,13 +131,15 @@ Location uic;</p>
       &quot;Accuracy: &quot; + accuracy + &quot;\n&quot; +
       &quot;Distance to UIC: &quot;+ location.getLocation().distanceTo(uic) + &quot; m\n&quot; + 
       &quot;Provider: &quot; + location.getProvider(), 20, 0, width, height);
-}</p>
-<p>void onResume()
+}
+
+void onResume()
 {
   location = new KetaiLocation(this);
   super.onResume();
-}</p>
-<p>void onLocationEvent(Location _location)
+}
+
+void onLocationEvent(Location _location)
 {
   //print out the location object
   println(&quot;onLocation event: &quot; + _location.toString());
@@ -145,42 +148,13 @@ Location uic;</p>
   altitude = _location.getAltitude();
   accuracy = _location.getAccuracy();
 }
-</textarea>
-Test</p>
-<ul>
-<li><strong>Screenshot</strong></li>
-</ul>
-
+</code></pre> <!-- * **Screenshot** --><img src="/assets/thumbnails/89abbf566bc1617a3f51abce694e8c27.png" width="800" height="480"></img>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <script type="text/javascript">
-    var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-      lineNumbers: true,
-      styleActiveLine: true,
-      matchBrackets: true
-    });
-    editor.setOption("theme", "midnight");
-    
-    var editor = CodeMirror.fromTextArea(document.getElementById("inline1"), {
-      lineNumbers: true,
-      styleActiveLine: true,
-      matchBrackets: true
-    });
-    editor.setOption("theme", "midnight");
-    
-    var editor = CodeMirror.fromTextArea(document.getElementById("inline2"), {
-      lineNumbers: true,
-      styleActiveLine: true,
-      matchBrackets: true
-    });
-    editor.setOption("theme", "midnight");
-    
-    
-    
-  </script><script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  </div><script src="//cdn.jsdelivr.net/highlight.js/8.4/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script><script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="/assets/scripts/jquery-1.7.2.min.js"><\/script>')</script>
   <script src="/assets/scripts/classie.js"></script>
   <script src="/assets/scripts/menu.js"></script>
