@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/assets/styles/code_block.css" />
     <link rel="stylesheet" href="/assets/styles/code_example.css">
-    <title>Ketai Library - Simple Face</title>
+    <title>Ketai Library - Face Detector</title>
   </head>
 </html>
 <body>
@@ -75,19 +75,24 @@
 </ul>
           </div>
           <div class="col span_4_of_6 reference">
-            <h3>Reference</h3><h4 id="simple-face">Simple Face</h4>
-<h5 id="-public-class-ketaisimpleface-"><code>public class KetaiSimpleFace</code></h5>
-<p>KetaiSimpleFace provide a utility class for faces found by the android face finding service.</p>
-<h5 id="-public-pvector-location-"><code>public PVector location</code></h5>
-<p>The location.</p>
-<h5 id="-public-float-distance-"><code>public float distance</code></h5>
-<p>The distance.</p>
-<h5 id="-public-float-confidence-"><code>public float confidence</code></h5>
-<p>The confidence.</p>
-<h5 id="-public-ketaisimpleface-face-f-"><code>public KetaiSimpleFace(Face f)</code></h5>
-<p>Instantiates a new ketai simple face.</p>
+            <h3>Reference</h3><h4 id="face-detector">Face Detector</h4>
+<h5 id="-public-class-ketaifacedetector-"><code>public class KetaiFaceDetector</code></h5>
+<p>KetaiFaceDetector wraps the android face detection api. The android face finding relies on eye detection and has limited accuracy but provides basic face detection without any external dependencies.</p>
+<h5 id="-public-static-ketaisimpleface-findfaces-pimage-_image-int-max_faces-"><code>public static KetaiSimpleFace[] findFaces(PImage _image, int MAX_FACES)</code></h5>
+<p>Find faces.</p>
 <ul>
-<li><strong>Parameters:</strong> <code>f</code> — the Face found.</li>
+<li><strong>Parameters:</strong><ul>
+<li><code>_image</code> — image to find faces in</li>
+<li><code>MAX_FACES</code> — the maximum number faces to find</li>
+</ul>
+</li>
+<li><strong>Returns:</strong> the ketai simple face[] - array of faces found</li>
+</ul>
+<h5 id="-public-static-ketaisimpleface-findfaces-pimage-_image-"><code>public static KetaiSimpleFace[] findFaces(PImage _image)</code></h5>
+<p>Find faces (max 5).</p>
+<ul>
+<li><strong>Parameters:</strong> <code>_image</code> — - image to find faces in.</li>
+<li><strong>Returns:</strong> the ketai simple face[]</li>
 </ul>
 <p><textarea id="code" class="codesnippet">
     This is in class folder</p>

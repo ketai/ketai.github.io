@@ -8,18 +8,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/assets/styles/html5reset.css" media="all">
     <link rel="stylesheet" href="/assets/styles/responsivegridsystem.css" media="all">
-    <link rel="stylesheet" href="/assets/styles/col.css" media="all">
-    <link rel="stylesheet" href="/assets/styles/2cols.css" media="all">
-    <link rel="stylesheet" href="/assets/styles/3cols.css" media="all">
-    <link rel="stylesheet" href="/assets/styles/4cols.css" media="all">
-    <link rel="stylesheet" href="/assets/styles/5cols.css" media="all">
     <link rel="stylesheet" href="/assets/styles/6cols.css" media="all">
-    <link rel="stylesheet" href="/assets/styles/7cols.css" media="all">
-    <link rel="stylesheet" href="/assets/styles/8cols.css" media="all">
-    <link rel="stylesheet" href="/assets/styles/9cols.css" media="all">
-    <link rel="stylesheet" href="/assets/styles/10cols.css" media="all">
-    <link rel="stylesheet" href="/assets/styles/11cols.css" media="all">
-    <link rel="stylesheet" href="/assets/styles/12cols.css" media="all">
     <!-- Responsive Stylesheets -->
     <link rel="stylesheet" media="only screen and (max-width: 1024px) and (min-width: 769px)" href="/assets/styles/1024.css">
     <link rel="stylesheet" media="only screen and (max-width: 768px) and (min-width: 481px)" href="/assets/styles/768.css">
@@ -28,7 +17,6 @@
     <script src="/assets/scripts/modernizr-2.5.3-min.js"></script><link rel="stylesheet" type="text/css" href="/assets/styles/menu_sideslide.css" />
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/assets/styles/code_block.css" />
-    <link rel="stylesheet" href="/assets/styles/custom_code.css">
     <link rel="stylesheet" href="/assets/styles/code_example.css">
     <title>Ketai Library - KBluetoothListner</title>
   </head>
@@ -38,13 +26,14 @@
   <nav class="menu">
     <div class="icon-list">
 <ul class="menu">
-  <li><a href="/get-started/"><i class="fa fa-circle-thin"> Get Started</i></a></li>
-  <li><a href="/projects/"><i class="fa fa-circle-thin"> Examples</i></a></li>
-  <li><a href="/references/"><i class="fa fa-circle-thin"> Reference</i></a></li>
-  <li><a href="/download/"><i class="fa fa-circle-thin"> Download</i></a></li><br/><br/>
-  <li><a href="https://github.com/ketai/library"><i class="fa fa-github"> Github</i></a></li>
-  <li><a href="https://github.com/ketai/ketaiLibrary.org/issues"><i class="fa fa-comment-o"> Forum</i></a></li>
-  <li><a href="https://twitter.com/ketailibrary"><i class="fa fa-twitter"> Twitter</i></a></li>
+  <li><a href="/">Home</a></li>
+  <li><a href="/get-started/">Get Started</a></li>
+  <li><a href="/projects/">Examples</a></li>
+  <li><a href="/references/">Reference</a></li>
+  <li><a href="/download/">Download</a></li><br/><br/>
+  <li><a href="https://github.com/ketai/library" class="misc_link"><i class="fa fa-github"> Github</i></a></li>
+  <li><a href="https://github.com/ketai/ketaiLibrary.org/issues" class="misc_link"><i class="fa fa-comment-o"> Forum</i></a></li>
+  <li><a href="https://twitter.com/ketailibrary" class="misc_link"><i class="fa fa-twitter"> Twitter</i></a></li>
 </ul>
     </div>
   </nav>
@@ -61,15 +50,16 @@
     <div id="maincontentcontainer">
       <div class="maincontent">
         <div class="section group">
-          <div class="col span_1_of_6 menubar"><img src="/assets/images/logo.svg">
+          <div class="col span_1_of_6 menubar"><a href="/"><img src="/assets/images/ketai_black.png" class="top"><img src="/assets/images/ketai_v10.png" class="bottom"></a>
 <ul class="menu">
-  <li><a href="/get-started/"><i class="fa fa-circle-thin"> Get Started</i></a></li>
-  <li><a href="/projects/"><i class="fa fa-circle-thin"> Examples</i></a></li>
-  <li><a href="/references/"><i class="fa fa-circle-thin"> Reference</i></a></li>
-  <li><a href="/download/"><i class="fa fa-circle-thin"> Download</i></a></li><br/><br/>
-  <li><a href="https://github.com/ketai/library"><i class="fa fa-github"> Github</i></a></li>
-  <li><a href="https://github.com/ketai/ketaiLibrary.org/issues"><i class="fa fa-comment-o"> Forum</i></a></li>
-  <li><a href="https://twitter.com/ketailibrary"><i class="fa fa-twitter"> Twitter</i></a></li>
+  <li><a href="/">Home</a></li>
+  <li><a href="/get-started/">Get Started</a></li>
+  <li><a href="/projects/">Examples</a></li>
+  <li><a href="/references/">Reference</a></li>
+  <li><a href="/download/">Download</a></li><br/><br/>
+  <li><a href="https://github.com/ketai/library" class="misc_link"><i class="fa fa-github"> Github</i></a></li>
+  <li><a href="https://github.com/ketai/ketaiLibrary.org/issues" class="misc_link"><i class="fa fa-comment-o"> Forum</i></a></li>
+  <li><a href="https://twitter.com/ketailibrary" class="misc_link"><i class="fa fa-twitter"> Twitter</i></a></li>
 </ul>
             <hr>
 <h4><b>Other Packages:</b></h4>
@@ -117,10 +107,11 @@
         </div>
       </div>
     </div>
-  </div><script src="//cdn.jsdelivr.net/highlight.js/8.4/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  </div><script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="/assets/scripts/jquery-1.7.2.min.js"><\/script>')</script>
+  <script src="//cdn.jsdelivr.net/highlight.js/8.4/highlight.min.js"></script>
+  <script> $(document).ready(function() {$('code').each(function(i, block) {    hljs.highlightBlock(block);  });});</script>
+  <script>hljs.initHighlightingOnLoad();</script>
   <script src="/assets/scripts/classie.js"></script>
   <script src="/assets/scripts/menu.js"></script>
   <script src="/assets/scripts/responsivegridsystem.js"></script>
