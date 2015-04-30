@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/styles/code_block.css" />
     <link rel="stylesheet" href="/assets/styles/code_example.css">
     <link rel="stylesheet" href="/assets/styles/search.css">
-    <title>Ketai Library - KetaiFace</title>
+    <title>Ketai Library - UriRecord</title>
   </head>
 </html>
 <body>
@@ -82,22 +82,49 @@
 </ul>
           </div>
           <div class="col span_4_of_6 reference">
-            <h3>Reference</h3><h4 id="ketaiface">KetaiFace</h4>
-<h5 id="-public-class-ketaiface-extends-face-"><code>public class KetaiFace extends Face</code></h5>
-<p>The Class KetaiFace wrap the internal android Face class.</p>
-<h5 id="-public-pvector-lefteye-righteye-mouth-center-"><code>public PVector leftEye, rightEye, mouth, center</code></h5>
-<p>The center.</p>
-<h5 id="-public-int-id-score-width-height-"><code>public int id, score, width, height</code></h5>
-<p>The height.</p>
-<h5 id="-public-ketaiface-face-f-int-framewidth-int-frameheight-"><code>public KetaiFace(Face f, int frameWidth, int frameHeight)</code></h5>
-<p>Instantiates a new ketai face.</p>
+            <h3>Reference</h3><h4 id="urirecord">UriRecord</h4>
+<h5 id="-public-class-urirecord-implements-parsedndefrecord-"><code>public class UriRecord implements ParsedNdefRecord</code></h5>
+<p>A parsed record containing a Uri.</p>
+<h5 id="-public-static-final-string-record_type-urirecord-"><code>public static final String RECORD_TYPE = &quot;UriRecord&quot;</code></h5>
+<p>The Constant RECORD_TYPE.</p>
+<h5 id="-suppresswarnings-serial-private-static-final-hashmap-byte-string-uri_prefix_map-new-hashmap-byte-string-"><code>@SuppressWarnings(&quot;serial&quot;)  private static final HashMap&lt;Byte, String&gt; URI_PREFIX_MAP = new HashMap&lt;Byte, String&gt;()</code></h5>
+<p>NFC Forum &quot;URI Record Type Definition&quot; </p>
+<p>This is a mapping of &quot;URI Identifier Codes&quot; to URI string prefixes, per section 3.2.2 of the NFC Forum URI Record Type Definition document.</p>
+<h5 id="-private-final-uri-muri-"><code>private final Uri mUri</code></h5>
+<p>The m uri.</p>
+<h5 id="-private-urirecord-uri-uri-"><code>private UriRecord(Uri uri)</code></h5>
+<p>Instantiates a new uri record.</p>
 <ul>
-<li><strong>Parameters:</strong><ul>
-<li><code>f</code> — the face Object</li>
-<li><code>frameWidth</code> — the frame width to map the Face on</li>
-<li><code>frameHeight</code> — the frame height to map the Face on</li>
+<li><strong>Parameters:</strong> <code>uri</code> — the uri</li>
 </ul>
-</li>
+<h5 id="-public-uri-geturi-"><code>public Uri getUri()</code></h5>
+<p>Gets the uri.</p>
+<ul>
+<li><strong>Returns:</strong> the uri</li>
+</ul>
+<h5 id="-public-static-urirecord-parse-ndefrecord-record-"><code>public static UriRecord parse(NdefRecord record)</code></h5>
+<p>Convert {@link android.nfc.NdefRecord} into a {@link android.net.Uri}. This will handle both TNF_WELL_KNOWN / RTD_URI and TNF_ABSOLUTE_URI.</p>
+<ul>
+<li><strong>Parameters:</strong> <code>record</code> — the record</li>
+<li><strong>Returns:</strong> the uri record</li>
+</ul>
+<h5 id="-private-static-urirecord-parseabsolute-ndefrecord-record-"><code>private static UriRecord parseAbsolute(NdefRecord record)</code></h5>
+<p>Parse and absolute URI record.</p>
+<ul>
+<li><strong>Parameters:</strong> <code>record</code> — the record</li>
+<li><strong>Returns:</strong> the uri record</li>
+</ul>
+<h5 id="-private-static-urirecord-parsewellknown-ndefrecord-record-"><code>private static UriRecord parseWellKnown(NdefRecord record)</code></h5>
+<p>Parse an well known URI record.</p>
+<ul>
+<li><strong>Parameters:</strong> <code>record</code> — the record</li>
+<li><strong>Returns:</strong> the uri record</li>
+</ul>
+<h5 id="-public-static-boolean-isuri-ndefrecord-record-"><code>public static boolean isUri(NdefRecord record)</code></h5>
+<p>Checks if is uri.</p>
+<ul>
+<li><strong>Parameters:</strong> <code>record</code> — the record</li>
+<li><strong>Returns:</strong> true, if is uri</li>
 </ul>
 
           </div>
