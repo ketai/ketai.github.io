@@ -97,11 +97,6 @@
 &nbsp;- Uses GPS location data (latitude, longitude, altitude (if available)<br>
 &nbsp;- Updates if location changes by 1 meter, or every 10 seconds<br>
 &nbsp;- If unavailable, defaults to system provider (cell tower or WiFi network location)<br></p>
-<p>Syntax: <br></p>
-<pre><code>onLocationEvent(latitude, longitude, altitude)
-onLocationEvent(latitude, longitude)
-onLocationEvent(latitude, longitude, altitude)
-</code></pre><hr>
 <div class="link"><a href="Geolocation.pde"><i class="fa fa-download fa-lg"></i> Geolocation. pde</a></div>
 
 <pre><code>import ketai.sensors.*; 
@@ -137,7 +132,8 @@ void onLocationEvent(double _latitude, double _longitude, double _altitude)
   altitude = _altitude;
   println(&quot;lat/lon/alt: &quot; + latitude + &quot;/&quot; + longitude + &quot;/&quot; + altitude);
 }
-</code></pre> <!-- * **Screenshot** --><img src="/assets/thumbnails/c33dafe261e7f55fcfbc6409203a0e61.png" width="800" height="480"></img>
+</code></pre> <!-- * **Screenshot** -->
+<img src="/assets/thumbnails/b55322910930f358733757006e7d8f8e.png" width="800" height="480"></img>
           </div>
         </div>
       </div>
