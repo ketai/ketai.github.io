@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://ketai.org/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/get-started/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/examples/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/download/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/sensors/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/camera/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/net/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/ui/ketaigesture/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/sensors/ketailocation/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/ui/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/camera/ketaiface/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/netbluetooth/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/net/wifidirect/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/netnfc/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/data/ketaisqlite/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/examples/accelerometer/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/examples/audioinput/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/examples/bluetoothcursors/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/examples/cameragettingstarted/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/examples/datacapture/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/examples/externalsqliteloading/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/examples/facedetector/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/examples/geolocation/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/examples/gestures/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/examples/gyroscope/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/examples/locationdistance/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/examples/multiplesensors/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/examples/nfcbeam/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/examples/nfcread/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/examples/nfcwrite/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/examples/sqlite/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/examples/ui/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/examples/wifidirect-remotecursor/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/cv/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/data/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/sensors/ketaiaudioinput/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/sensors/ketaisensor/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/sensors/location/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/camera/ketaicamera/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/net/ketainet/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/net/ketaioscmessage/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/net/slipframe/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/net/bluetooth/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/net/nfc/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/ui/ketaivibrate/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/ui/ketaialertdialog/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/ui/ketaikeyboard/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/ui/ketailist/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/netbluetooth/kbluetoothconnection/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/netbluetooth/kbluetoothlistener/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/netbluetooth/ketai-bluetooth/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/netnfc/ketainfc/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/netnfc/ndefmessageparser/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/netnfc/parsedndefrecord/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/netnfc/smartposter/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/netnfc/textrecord/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/netnfc/urirecord/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/cv/ketaifacedetector/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/cv/ketaisimpleface/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ketai.org/reference/cv/facedetector/</loc>
+  <lastmod>2015-08-13T05:59:55+00:00</lastmod>
+</url>
+</urlset>
