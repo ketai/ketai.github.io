@@ -99,7 +99,6 @@
 &nbsp;- Uses GPS location data (latitude, longitude, altitude (if available)<br>
 &nbsp;- Updates if location changes by 1 meter, or every 10 seconds<br>
 &nbsp;- If unavailable, defaults to system provider (cell tower or WiFi network location)</p>
-<hr>
 <div class="link"><a href="LocationDistance.pde"><i class="fa fa-download fa-lg"></i> LocationDistance.pde</a></div>
 
 <pre><code>import ketai.sensors.*; 
@@ -148,7 +147,8 @@ void onLocationEvent(Location _location)
   altitude = _location.getAltitude();
   accuracy = _location.getAccuracy();
 }
-</code></pre> <!-- * **Screenshot** --><img src="/assets/thumbnails/680da18088e4dcbd663427e36f0448b8.png" width="800" height="480"></img>
+</code></pre> <!-- * **Screenshot** -->
+<img src="/assets/thumbnails/1dd38885cce34cc6231ddad9541dfd24.png" width="800" height="480"></img>
           </div>
         </div>
       </div>

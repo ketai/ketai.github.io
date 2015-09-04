@@ -8,7 +8,13 @@
         '//cse.google.com/cse.js?cx=' + cx;
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(gcse, s);
+
+    if  ($('.gsc-results-wrapper-visible').is(":visible")) {
+        $(".reference").hide();
+    }
   })();
+
+
 
 // (function() {
 //     var cx = '017643444788069204610:4gvhea_mvga'; // Insert your own Custom Search engine ID here
