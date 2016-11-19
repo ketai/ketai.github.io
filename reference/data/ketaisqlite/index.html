@@ -31,11 +31,7 @@
     <li><a href="/">Home</a></li>
     <li><a href="/get-started/">Get Started</a></li>
     <li><a href="/examples/">Examples</a></li>
-<<<<<<< HEAD
     <li><a href="/reference/"></a></li>
-=======
-    <li><a href="/reference/">Reference</a></li>
->>>>>>> 676edcb2b4f2920c6b330e83c3db143cc5f66f53
     <li><a href="/download/">Download</a></li>
     <li><a href="/exhibition/">Exhibition</a></li><br/>
     <script src="/assets/scripts/google_search.js"></script><gcse:search enableAutoComplete="true"></gcse:search><br/>
@@ -66,11 +62,7 @@
     <li><a href="/">Home</a></li>
     <li><a href="/get-started/">Get Started</a></li>
     <li><a href="/examples/">Examples</a></li>
-<<<<<<< HEAD
     <li><a href="/reference/"></a></li>
-=======
-    <li><a href="/reference/">Reference</a></li>
->>>>>>> 676edcb2b4f2920c6b330e83c3db143cc5f66f53
     <li><a href="/download/">Download</a></li>
     <li><a href="/exhibition/">Exhibition</a></li><br/>
     <script src="/assets/scripts/google_search.js"></script><gcse:search enableAutoComplete="true"></gcse:search><br/>
@@ -86,7 +78,6 @@
   <li><a href="/reference/cv/"></a></li>
   <li><a href="/reference/camera/"></a></li>
   <li><a href="/reference/data/">Data</a></li>
-<<<<<<< HEAD
   <li><a href="/reference/net/"></a></li>
   <li><a href="/reference/sensors/"></a></li>
   <li><a href="/reference/ui/"></a></li>
@@ -118,28 +109,11 @@
 <h5 id="-private-sqlitestatement-sqlstatement-"><code>private SQLiteStatement sqlStatement</code></h5>
 <p>The sql statement.</p>
 <h5 id="-public-ketaisqlite-papplet-p-"><code>public KetaiSQLite(PApplet p)</code></h5>
-=======
-  <li><a href="/reference/net/">Net</a></li>
-  <li><a href="/reference/sensors/">Sensors</a></li>
-  <li><a href="/reference/ui/">UI</a></li>
-  <li><a href="/reference/net/"></a></li>
-</ul>
-          </div>
-          <div class="col span_4_of_6 reference">
-            <h3>Reference</h3><h4 id="ketaisqlite">KetaiSQLite</h4>
-<h5 id="-class-ketaisqlite-"><code>class KetaiSQLite</code></h5>
-<p>The Class KetaiSQLite provides access to the underlying SQLite database that every activity is provided with.</p>
-<h5 id="-ketaisqlite-papplet-p-"><code>KetaiSQLite(PApplet p)</code></h5>
->>>>>>> 676edcb2b4f2920c6b330e83c3db143cc5f66f53
 <p>Instantiates a new ketai sqlite object.</p>
 <ul>
 <li><strong>Parameters:</strong> <code>context</code> — the context/PApplet/Activity using this class</li>
 </ul>
-<<<<<<< HEAD
 <h5 id="-public-ketaisqlite-papplet-p-string-dbname-"><code>public KetaiSQLite(PApplet p, String dbname)</code></h5>
-=======
-<h5 id="-ketaisqlite-papplet-p-string-dbname-"><code>KetaiSQLite(PApplet p, String dbname)</code></h5>
->>>>>>> 676edcb2b4f2920c6b330e83c3db143cc5f66f53
 <p>Instantiates a new ketai sqlite.</p>
 <ul>
 <li><strong>Parameters:</strong><ul>
@@ -148,11 +122,7 @@
 </ul>
 </li>
 </ul>
-<<<<<<< HEAD
 <h5 id="-static-public-boolean-load-papplet-_context-string-filename-string-dbname-"><code>static public boolean load(PApplet _context, String filename, String dbname)</code></h5>
-=======
-<h5 id="-static-boolean-load-papplet-_context-string-filename-string-dbname-"><code>static  boolean load(PApplet _context, String filename, String dbname)</code></h5>
->>>>>>> 676edcb2b4f2920c6b330e83c3db143cc5f66f53
 <p>Load - loads an external .sql file into the local SQLite database service. Useful for populating data for an activity to use.</p>
 <ul>
 <li><strong>Parameters:</strong><ul>
@@ -163,126 +133,126 @@
 </li>
 <li><strong>Returns:</strong> true, if successful</li>
 </ul>
-<h5 id="-string-getpath-"><code>String getPath()</code></h5>
+<h5 id="-public-string-getpath-"><code>public String getPath()</code></h5>
 <p>Gets the path of the database</p>
 <ul>
 <li><strong>Returns:</strong> the path of the database</li>
 </ul>
-<h5 id="-sqlitedatabase-getdb-"><code>SQLiteDatabase getDb()</code></h5>
+<h5 id="-public-sqlitedatabase-getdb-"><code>public SQLiteDatabase getDb()</code></h5>
 <p>Gets the db from the sqlite service</p>
 <ul>
 <li><strong>Returns:</strong> the db reference.</li>
 </ul>
-<h5 id="-boolean-connect-"><code>boolean connect()</code></h5>
+<h5 id="-public-boolean-connect-"><code>public boolean connect()</code></h5>
 <p>Connect to the database.</p>
 <ul>
 <li><strong>Returns:</strong> true, if successful</li>
 </ul>
-<h5 id="-void-close-"><code>void close()</code></h5>
+<h5 id="-public-void-close-"><code>public void close()</code></h5>
 <p>Close the database.</p>
-<h5 id="-void-dispose-"><code>void dispose()</code></h5>
+<h5 id="-public-void-dispose-"><code>public void dispose()</code></h5>
 <p>Dispose.</p>
-<h5 id="-boolean-execute-string-_sql-"><code>boolean execute(String _sql)</code></h5>
+<h5 id="-public-boolean-execute-string-_sql-"><code>public boolean execute(String _sql)</code></h5>
 <p>Execute an SQL statement</p>
 <ul>
 <li><strong>Parameters:</strong> <code>_sql</code> — the SQL statement to execute.</li>
 <li><strong>Returns:</strong> true, if successful</li>
 </ul>
-<h5 id="-boolean-query-string-_query-"><code>boolean query(String _query)</code></h5>
+<h5 id="-public-boolean-query-string-_query-"><code>public boolean query(String _query)</code></h5>
 <p>Query the database.</p>
 <ul>
 <li><strong>Parameters:</strong> <code>_query</code> — the query string</li>
 <li><strong>Returns:</strong> true, if successful</li>
 </ul>
-<h5 id="-boolean-next-"><code>boolean next()</code></h5>
+<h5 id="-public-boolean-next-"><code>public boolean next()</code></h5>
 <p>Next - move to the next object in our last result set.</p>
 <ul>
 <li><strong>Returns:</strong> true, if successful</li>
 </ul>
-<h5 id="-double-getdouble-int-_col-"><code>double getDouble(int _col)</code></h5>
+<h5 id="-public-double-getdouble-int-_col-"><code>public double getDouble(int _col)</code></h5>
 <p>Gets the double value from a column in our resultset</p>
 <ul>
 <li><strong>Parameters:</strong> <code>_col</code> — the column/field index number</li>
 <li><strong>Returns:</strong> the double</li>
 </ul>
-<h5 id="-double-getdouble-string-field-"><code>double getDouble(String field)</code></h5>
+<h5 id="-public-double-getdouble-string-field-"><code>public double getDouble(String field)</code></h5>
 <p>Gets the double value from a column in our resultset.</p>
 <ul>
 <li><strong>Parameters:</strong> <code>field</code> — the field name</li>
 <li><strong>Returns:</strong> the double</li>
 </ul>
-<h5 id="-float-getfloat-int-_col-"><code>float getFloat(int _col)</code></h5>
+<h5 id="-public-float-getfloat-int-_col-"><code>public float getFloat(int _col)</code></h5>
 <p>Gets the float value from a column in our resultset.</p>
 <ul>
 <li><strong>Parameters:</strong> <code>_col</code> — the column index number</li>
 <li><strong>Returns:</strong> the float</li>
 </ul>
-<h5 id="-float-getfloat-string-field-"><code>float getFloat(String field)</code></h5>
+<h5 id="-public-float-getfloat-string-field-"><code>public float getFloat(String field)</code></h5>
 <p>Gets the float value from a column in our resultset.</p>
 <ul>
 <li><strong>Parameters:</strong> <code>field</code> — the field mame</li>
 <li><strong>Returns:</strong> the float</li>
 </ul>
-<h5 id="-int-getint-int-_col-"><code>int getInt(int _col)</code></h5>
+<h5 id="-public-int-getint-int-_col-"><code>public int getInt(int _col)</code></h5>
 <p>Gets the int value from a column index in our resultset.</p>
 <ul>
 <li><strong>Parameters:</strong> <code>_col</code> — the column index number</li>
 <li><strong>Returns:</strong> the int</li>
 </ul>
-<h5 id="-int-getint-string-field-"><code>int getInt(String field)</code></h5>
+<h5 id="-public-int-getint-string-field-"><code>public int getInt(String field)</code></h5>
 <p>Gets the int value from a column in our resultset.</p>
 <ul>
 <li><strong>Parameters:</strong> <code>field</code> — the field name</li>
 <li><strong>Returns:</strong> the int</li>
 </ul>
-<h5 id="-long-getlong-int-_col-"><code>long getLong(int _col)</code></h5>
+<h5 id="-public-long-getlong-int-_col-"><code>public long getLong(int _col)</code></h5>
 <p>Gets the long value from a column in our resultset.</p>
 <ul>
 <li><strong>Parameters:</strong> <code>_col</code> — the column/field index number</li>
 <li><strong>Returns:</strong> the long</li>
 </ul>
-<h5 id="-long-getlong-string-field-"><code>long getLong(String field)</code></h5>
+<h5 id="-public-long-getlong-string-field-"><code>public long getLong(String field)</code></h5>
 <p>Gets the long value from a column in our resultset.</p>
 <ul>
 <li><strong>Parameters:</strong> <code>field</code> — the field/column name</li>
 <li><strong>Returns:</strong> the long</li>
 </ul>
-<h5 id="-byte-getblob-int-_col-"><code>byte[] getBlob(int _col)</code></h5>
+<h5 id="-public-byte-getblob-int-_col-"><code>public byte[] getBlob(int _col)</code></h5>
 <p>Gets the blob value from a column in our resultset.</p>
 <ul>
 <li><strong>Parameters:</strong> <code>_col</code> — the column/field index number</li>
 <li><strong>Returns:</strong> the blob</li>
 </ul>
-<h5 id="-byte-getblob-string-field-"><code>byte[] getBlob(String field)</code></h5>
+<h5 id="-public-byte-getblob-string-field-"><code>public byte[] getBlob(String field)</code></h5>
 <p>Gets the blob value from a column in our resultset.</p>
 <ul>
 <li><strong>Parameters:</strong> <code>field</code> — the field/column name</li>
 <li><strong>Returns:</strong> the blob</li>
 </ul>
-<h5 id="-string-getstring-int-_col-"><code>String getString(int _col)</code></h5>
+<h5 id="-public-string-getstring-int-_col-"><code>public String getString(int _col)</code></h5>
 <p>Gets the string value from a column in our resultset.</p>
 <ul>
 <li><strong>Parameters:</strong> <code>_col</code> — the column/field index number</li>
 <li><strong>Returns:</strong> the string</li>
 </ul>
-<h5 id="-string-getstring-string-field-"><code>String getString(String field)</code></h5>
+<h5 id="-public-string-getstring-string-field-"><code>public String getString(String field)</code></h5>
 <p>Gets the string value from a column in our resultset.</p>
 <ul>
 <li><strong>Parameters:</strong> <code>field</code> — the field/column name</li>
 <li><strong>Returns:</strong> the string</li>
 </ul>
-<h5 id="-string-gettables-"><code>String[] getTables()</code></h5>
+<h5 id="-public-string-gettables-"><code>public String[] getTables()</code></h5>
 <p>Gets the table names in our database.</p>
 <ul>
 <li><strong>Returns:</strong> the names of the tables in the database</li>
 </ul>
-<h5 id="-string-getfields-string-table-"><code>String[] getFields(String table)</code></h5>
+<h5 id="-public-string-getfields-string-table-"><code>public String[] getFields(String table)</code></h5>
 <p>Gets the field names</p>
 <ul>
 <li><strong>Parameters:</strong> <code>table</code> — the table name</li>
 <li><strong>Returns:</strong> the fields</li>
 </ul>
-<h5 id="-string-getfieldmin-string-table-string-field-"><code>String getFieldMin(String table, String field)</code></h5>
+<h5 id="-public-string-getfieldmin-string-table-string-field-"><code>public String getFieldMin(String table, String field)</code></h5>
 <p>Gets the field min value</p>
 <ul>
 <li><strong>Parameters:</strong><ul>
@@ -292,7 +262,7 @@
 </li>
 <li><strong>Returns:</strong> the field min value</li>
 </ul>
-<h5 id="-string-getfieldmax-string-table-string-field-"><code>String getFieldMax(String table, String field)</code></h5>
+<h5 id="-public-string-getfieldmax-string-table-string-field-"><code>public String getFieldMax(String table, String field)</code></h5>
 <p>Gets the field max value.</p>
 <ul>
 <li><strong>Parameters:</strong><ul>
@@ -302,31 +272,43 @@
 </li>
 <li><strong>Returns:</strong> the field max value</li>
 </ul>
-<h5 id="-long-getrecordcount-string-table-"><code>long getRecordCount(String table)</code></h5>
+<h5 id="-public-long-getrecordcount-string-table-"><code>public long getRecordCount(String table)</code></h5>
 <p>Gets the record count for the table.</p>
 <ul>
 <li><strong>Parameters:</strong> <code>table</code> — the table name</li>
 <li><strong>Returns:</strong> the record count</li>
 </ul>
-<h5 id="-long-getdatacount-"><code>long getDataCount()</code></h5>
+<h5 id="-public-long-getdatacount-"><code>public long getDataCount()</code></h5>
 <p>Gets the data count (records in all tables in the database)</p>
 <ul>
 <li><strong>Returns:</strong> the data count</li>
 </ul>
-<h5 id="-boolean-tableexists-string-_table-"><code>boolean tableExists(String _table)</code></h5>
+<h5 id="-public-boolean-tableexists-string-_table-"><code>public boolean tableExists(String _table)</code></h5>
 <p>Check to see if the table exists.</p>
 <ul>
 <li><strong>Parameters:</strong> <code>_table</code> — the table name</li>
 <li><strong>Returns:</strong> true, if successful</li>
 </ul>
-<h5 id="-void-exportdata-string-_targetdirectory-throws-ioexception-"><code>void exportData(String _targetDirectory) throws IOException</code></h5>
+<h5 id="-public-void-exportdata-string-_targetdirectory-throws-ioexception-"><code>public void exportData(String _targetDirectory) throws IOException</code></h5>
 <p>Export data to a text file (tab delimited).</p>
 <ul>
 <li><strong>Parameters:</strong> <code>_targetDirectory</code> — the target directory</li>
 <li><strong>Exceptions:</strong> <code>IOException</code> — Signals that an I/O exception has occurred.</li>
 </ul>
-<h5 id="-void-deletealldata-"><code>void deleteAllData()</code></h5>
+<h5 id="-public-void-deletealldata-"><code>public void deleteAllData()</code></h5>
 <p>Delete all data in our database. Deletes all tables.</p>
+<h5 id="-private-void-writetofile-string-data-string-_dir-string-exportfilename-"><code>private void writeToFile(String data, String _dir, String exportFileName)</code></h5>
+<p>Write to file.</p>
+<ul>
+<li><strong>Parameters:</strong><ul>
+<li><code>data</code> — the data</li>
+<li><code>_dir</code> — the _dir</li>
+<li><code>exportFileName</code> — the export file name</li>
+</ul>
+</li>
+</ul>
+<h5 id="-private-class-openhelper-extends-sqliteopenhelper-"><code>private class OpenHelper extends SQLiteOpenHelper</code></h5>
+<p>The Class OpenHelper.</p>
 <h5 id="-openhelper-context-context-"><code>OpenHelper(Context context)</code></h5>
 <p>Instantiates a new open helper.</p>
 <ul>
