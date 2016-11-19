@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="description"><meta name="HandheldFriendly" content="True">
+    <meta name="description" content="Bacon ipsum dolor amet chuck do pork loin hamburger. Tenderloin drumstick fugiat rump alcatra in pork loin cupidatat ham hock culpa proident picanha leberkas ground round. Pork chop beef ribs shankle, pork belly aliqua exercitation ut ut quis porchetta adipisicing swine. Tail cow nisi, est qui filet mignon ullamco commodo kielbasa dolore aliquip occaecat pork chop aute lorem. Strip steak ea pancetta cillum tongue. Turkey pork elit ribeye porchetta.
+
+Dolore cow velit flank, eiusmod drumstick tongue aliquip et qui chuck shankle laboris ut lorem. Cow tri-tip laboris, salami pork sint tail qui. Dolor shankle anim fatback filet mignon aute mollit. Capicola frankfurter bresaola dolore, ut in prosciutto pork chop strip steak boudin duis aute."><meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
@@ -19,7 +21,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/styles/code_block.css" />
     <link rel="stylesheet" href="/assets/styles/search.css">
     <link rel="stylesheet" href="/assets/styles/code_example.css">
-    <title>Ketai Library - Data Capture</title>
+    <title>Ketai Library - Lorem Ipsum</title>
   </head>
 </html>
 <body>
@@ -31,11 +33,7 @@
     <li><a href="/">Home</a></li>
     <li><a href="/get-started/">Get Started</a></li>
     <li><a href="/examples/">Examples</a></li>
-<<<<<<< HEAD
     <li><a href="/reference/"></a></li>
-=======
-    <li><a href="/reference/">Reference</a></li>
->>>>>>> 676edcb2b4f2920c6b330e83c3db143cc5f66f53
     <li><a href="/download/">Download</a></li>
     <li><a href="/exhibition/">Exhibition</a></li><br/>
     <script src="/assets/scripts/google_search.js"></script><gcse:search enableAutoComplete="true"></gcse:search><br/>
@@ -66,11 +64,7 @@
     <li><a href="/">Home</a></li>
     <li><a href="/get-started/">Get Started</a></li>
     <li><a href="/examples/">Examples</a></li>
-<<<<<<< HEAD
     <li><a href="/reference/"></a></li>
-=======
-    <li><a href="/reference/">Reference</a></li>
->>>>>>> 676edcb2b4f2920c6b330e83c3db143cc5f66f53
     <li><a href="/download/">Download</a></li>
     <li><a href="/exhibition/">Exhibition</a></li><br/>
     <script src="/assets/scripts/google_search.js"></script><gcse:search enableAutoComplete="true"></gcse:search><br/>
@@ -87,7 +81,7 @@
   <li><a href="/examples/audioinput/">Audio Input</a></li>
   <li><a href="/examples/bluetoothcursors/">Bluetooth Connection</a></li>
   <li><a href="/examples/cameragettingstarted/">Getting Camera Started</a></li>
-  <li><a href="/examples/datacapture/" class="active">Data Capture</a></li>
+  <li><a href="/examples/datacapture/">Data Capture</a></li>
   <li><a href="/examples/externalsqliteloading/">External SQLite Loading</a></li>
   <li><a href="/examples/facedetector/">Face Detector</a></li>
   <li><a href="/examples/geolocation/">Geolocation</a></li>
@@ -104,111 +98,16 @@
 </ul>
           </div>
           <div class="col span_4_of_6 reference">
-            <h3>Examples</h3><h4 id="data-capture">Data Capture</h4>
-<p>This is the example for Data Capture</p>
-<div class="link"><a href="DataCapture.pde"><i class="fa fa-download fa-lg"></i> DataCapture. pde</a></div>
+            <h3>Exhibition</h3>
+<h4><p>Lorem Ipsum</p>
 
-<pre><code>import ketai.data.*;
-import ketai.sensors.*;
+</h4><img src="/assets/thumbnails/81fd591bd3c2394a8cd173d5cc83dd6b.jpg" width="800" height="600"></img><br/><p><a href="http://www.ketai.org/exhibition">http://www.ketai.org/exhibition</a></p>
 
-KetaiSensor sensor;
-KetaiSQLite db;
-Boolean isCapturing = false;
+<hr/>
+<h4>Description</h4><p>Bacon ipsum dolor amet chuck do pork loin hamburger. Tenderloin drumstick fugiat rump alcatra in pork loin cupidatat ham hock culpa proident picanha leberkas ground round. Pork chop beef ribs shankle, pork belly aliqua exercitation ut ut quis porchetta adipisicing swine. Tail cow nisi, est qui filet mignon ullamco commodo kielbasa dolore aliquip occaecat pork chop aute lorem. Strip steak ea pancetta cillum tongue. Turkey pork elit ribeye porchetta.</p>
+<p>Dolore cow velit flank, eiusmod drumstick tongue aliquip et qui chuck shankle laboris ut lorem. Cow tri-tip laboris, salami pork sint tail qui. Dolor shankle anim fatback filet mignon aute mollit. Capicola frankfurter bresaola dolore, ut in prosciutto pork chop strip steak boudin duis aute.</p>
 
-String CREATE_DB_SQL = &quot;CREATE TABLE data ( time INTEGER PRIMARY KEY, x FLOAT NOT NULL, y FLOAT NOT NULL, z FLOAT NOT NULL);&quot;;
-
-void setup()
-{
-  db = new KetaiSQLite(this);
-  sensor = new KetaiSensor(this);
-  frameRate(5);
-  orientation(LANDSCAPE);
-  textAlign(CENTER, CENTER);
-  textSize(36);
-
-  //lets make our table if it is the first time we&#39;re running 
-  if ( db.connect() )
-  {
-    // for initial app launch there are no tables so we make one
-    if (!db.tableExists(&quot;data&quot;))
-      db.execute(CREATE_DB_SQL);
-  }
-  sensor.start();
-}
-
-void draw() {
-  background(78, 93, 75);
-  // Status and data count
-  if (isCapturing)
-    text(&quot;Recording Accellerometer Data...\n(touch screen to stop)&quot;, width/2, height/4);
-  else
-  {
-    plotData();
-    text(&quot;Visualizing last &quot; + width + &quot; point(s) of data.&quot;, width/2, height/4);
-  } 
-  text(&quot;Current Data count: &quot; + db.getDataCount(), width/2, height-height/4);
-}
-
-void mousePressed()
-{
-  if (isCapturing)
-    isCapturing = false;
-  else
-    isCapturing = true;
-}
-/*
-      collect accelerometer data and save it to the database
-*/
-void onAccelerometerEvent(float x, float y, float z, long time, int accuracy)
-{
-  if (db.connect() &amp;&amp; isCapturing)
-  {
-    if (!db.execute(&quot;INSERT into data (`time`,`x`,`y`,`z`) VALUES (&#39;&quot;+System.currentTimeMillis()+&quot;&#39;, &#39;&quot;+x+&quot;&#39;, &#39;&quot;+y+&quot;&#39;, &#39;&quot;+z+&quot;&#39;)&quot;))
-      println(&quot;Failed to record data!&quot; );
-  }
-}
-
-void plotData()
-{
-  if (db.connect())
-  {
-    pushStyle();
-    noStroke();
-    db.query( &quot;SELECT * FROM data ORDER BY time DESC LIMIT &quot; + width );
-    int  i = 0;   
-    long mymin = Long.parseLong(db.getFieldMin(&quot;data&quot;, &quot;time&quot;));
-    long mymax = Long.parseLong(db.getFieldMax(&quot;data&quot;, &quot;time&quot;));
-    while (db.next ())
-    {
-
-      float x = db.getFloat(&quot;x&quot;);
-      float y = db.getFloat(&quot;y&quot;);
-      float z = db.getFloat(&quot;z&quot;);
-      long  t = db.getLong(&quot;time&quot;);
-      int plotx = (int)maplong(t, mymin, mymax, 0, width);
-
-      fill(255, 0, 0);
-      ellipse(plotx, map(x, -30, 30, 0, height), 5, 5);
-      fill(0, 255, 0);
-      ellipse(i, map(y, -30, 30, 0, height), 5, 5);
-      fill(0, 0, 255);
-      ellipse(i, map(z, -30, 30, 0, height), 5, 5);
-
-      i++;
-    }
-    popStyle();
-  }
-}
-
-long maplong(long value, long istart, long istop, long ostart, long ostop) {
-  long divisor = istop - istart;
-  return (ostart + (ostop - ostart) * (value - istart) / divisor);
-}
-<<<<<<< HEAD
-</code></pre><img src="/assets/thumbnails/b13d00e2553013cd975817e6a5885cc1.png" width="800" height="480"></img>
-=======
-</code></pre><img src="/assets/thumbnails/02be7a20ccbf46f6cb09a4d6cfdb6513.png" width="800" height="480"></img>
->>>>>>> 676edcb2b4f2920c6b330e83c3db143cc5f66f53
+<hr/>
           </div>
         </div>
       </div>

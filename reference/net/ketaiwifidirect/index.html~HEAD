@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/styles/code_block.css" />
     <link rel="stylesheet" href="/assets/styles/code_example.css">
     <link rel="stylesheet" href="/assets/styles/search.css">
-    <title>Ketai Library - KetaiAlertDialog</title>
+    <title>Ketai Library - KetaiWiFiDirect</title>
   </head>
 </html>
 <body>
@@ -31,11 +31,7 @@
     <li><a href="/">Home</a></li>
     <li><a href="/get-started/">Get Started</a></li>
     <li><a href="/examples/">Examples</a></li>
-<<<<<<< HEAD
     <li><a href="/reference/"></a></li>
-=======
-    <li><a href="/reference/">Reference</a></li>
->>>>>>> 676edcb2b4f2920c6b330e83c3db143cc5f66f53
     <li><a href="/download/">Download</a></li>
     <li><a href="/exhibition/">Exhibition</a></li><br/>
     <script src="/assets/scripts/google_search.js"></script><gcse:search enableAutoComplete="true"></gcse:search><br/>
@@ -66,11 +62,7 @@
     <li><a href="/">Home</a></li>
     <li><a href="/get-started/">Get Started</a></li>
     <li><a href="/examples/">Examples</a></li>
-<<<<<<< HEAD
     <li><a href="/reference/"></a></li>
-=======
-    <li><a href="/reference/">Reference</a></li>
->>>>>>> 676edcb2b4f2920c6b330e83c3db143cc5f66f53
     <li><a href="/download/">Download</a></li>
     <li><a href="/exhibition/">Exhibition</a></li><br/>
     <script src="/assets/scripts/google_search.js"></script><gcse:search enableAutoComplete="true"></gcse:search><br/>
@@ -86,7 +78,6 @@
   <li><a href="/reference/cv/"></a></li>
   <li><a href="/reference/camera/"></a></li>
   <li><a href="/reference/data/">Data</a></li>
-<<<<<<< HEAD
   <li><a href="/reference/net/"></a></li>
   <li><a href="/reference/sensors/"></a></li>
   <li><a href="/reference/ui/"></a></li>
@@ -100,31 +91,57 @@
 </ul>
           </div>
           <div class="col span_4_of_6 reference">
-            <h3>Reference</h3><p>####KetaiAlertDialog</p>
-<h5 id="-public-class-ketaialertdialog-"><code>public class KetaiAlertDialog</code></h5>
-<p>The KetaiAlertDialog.</p>
-<h5 id="-public-static-void-popup-papplet-_parent-string-_title-string-_message-"><code>public static void popup(PApplet _parent, String _title, String _message)</code></h5>
-=======
-  <li><a href="/reference/net/">Net</a></li>
-  <li><a href="/reference/sensors/">Sensors</a></li>
-  <li><a href="/reference/ui/">UI</a></li>
-  <li><a href="/reference/net/"></a></li>
-</ul>
-          </div>
-          <div class="col span_4_of_6 reference">
-            <h3>Reference</h3><h4 id="ketaialertdialog">KetaiAlertDialog</h4>
-<h5 id="-class-ketaialertdialog-"><code>class KetaiAlertDialog</code></h5>
-<p>The KetaiAlertDialog.</p>
-<h5 id="-static-void-popup-papplet-_parent-string-_title-string-_message-"><code>static void popup(PApplet _parent, String _title, String _message)</code></h5>
->>>>>>> 676edcb2b4f2920c6b330e83c3db143cc5f66f53
-<p>Popup.</p>
+            <h3>Reference</h3><h4 id="ketaiwifidirect">KetaiWiFiDirect</h4>
+<h5 id="-class-ketaiwifidirect-extends-broadcastreceiver-implements-channellistener-connectioninfolistener-actionlistener-peerlistlistener-"><code>class KetaiWiFiDirect extends BroadcastReceiver implements   ChannelListener, ConnectionInfoListener, ActionListener,   PeerListListener</code></h5>
+<p>The KetaiWiFiDirect class is an experimental class that provides a wifi direct access to a sketch. WifiDirect provides peer-to-peer networking between devices. No wireless infrastructure is needed.</p>
+<h5 id="-papplet-parent-"><code>PApplet parent</code></h5>
+<p>The parent.</p>
+<h5 id="-ketaiwifidirect-papplet-_parent-"><code>KetaiWiFiDirect(PApplet _parent)</code></h5>
+<p>Instantiates a new ketai wi fi direct object</p>
 <ul>
-<li><strong>Parameters:</strong><ul>
-<li><code>_parent</code> — calling sketch/PApplet/Activity</li>
-<li><code>_title</code> — the title for the dialog</li>
-<li><code>_message</code> — the message inside of the dialog box</li>
+<li><strong>Parameters:</strong> <code>_parent</code> — the calling sketch/Activity/PApplet</li>
 </ul>
-</li>
+<h5 id="-void-setiswifip2penabled-boolean-iswifip2penabled-"><code>void setIsWifiP2pEnabled(boolean isWifiP2pEnabled)</code></h5>
+<p>Sets the checks if wifi p2p enabled.</p>
+<ul>
+<li><strong>Parameters:</strong> <code>isWifiP2pEnabled</code> — the new checks if is wifi p2p enabled</li>
+</ul>
+<h5 id="-void-resume-"><code>void resume()</code></h5>
+<p>Resume. (used by android activity administration)</p>
+<h5 id="-void-pause-"><code>void pause()</code></h5>
+<p>Pause.(used by android activity administration)</p>
+<h5 id="-void-disconnect-"><code>void disconnect()</code></h5>
+<p>Disconnect. clean out resources</p>
+<h5 id="-void-canceldisconnect-"><code>void cancelDisconnect()</code></h5>
+<p>Cancel disconnect.</p>
+<h5 id="-void-getconnectioninfo-"><code>void getConnectionInfo()</code></h5>
+<p>Gets the connection information.</p>
+<ul>
+<li><strong>Returns:</strong> the connection info</li>
+</ul>
+<h5 id="-string-getipaddress-"><code>String getIPAddress()</code></h5>
+<p>Gets the iP address used by the connection.</p>
+<ul>
+<li><strong>Returns:</strong> the iP address</li>
+</ul>
+<h5 id="-void-discover-"><code>void discover()</code></h5>
+<p>Discover.</p>
+<h5 id="-string-gethardwareaddress-"><code>String getHardwareAddress()</code></h5>
+<p>Gets the hardware address of the wifi interface</p>
+<ul>
+<li><strong>Returns:</strong> the hardware address</li>
+</ul>
+<h5 id="-void-reset-"><code>void reset()</code></h5>
+<p>Reset.</p>
+<h5 id="-arraylist-string-getpeernamelist-"><code>ArrayList&lt;String&gt; getPeerNameList()</code></h5>
+<p>Gets the peer name list.</p>
+<ul>
+<li><strong>Returns:</strong> the peer name list</li>
+</ul>
+<h5 id="-void-connect-string-devicename-"><code>void connect(String deviceName)</code></h5>
+<p>Connect to a device by name.</p>
+<ul>
+<li><strong>Parameters:</strong> <code>deviceName</code> — the device name</li>
 </ul>
 
           </div>

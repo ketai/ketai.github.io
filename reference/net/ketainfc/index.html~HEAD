@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/styles/code_block.css" />
     <link rel="stylesheet" href="/assets/styles/code_example.css">
     <link rel="stylesheet" href="/assets/styles/search.css">
-    <title>Ketai Library - KetaiAlertDialog</title>
+    <title>Ketai Library - KetaiNFC</title>
   </head>
 </html>
 <body>
@@ -31,11 +31,7 @@
     <li><a href="/">Home</a></li>
     <li><a href="/get-started/">Get Started</a></li>
     <li><a href="/examples/">Examples</a></li>
-<<<<<<< HEAD
     <li><a href="/reference/"></a></li>
-=======
-    <li><a href="/reference/">Reference</a></li>
->>>>>>> 676edcb2b4f2920c6b330e83c3db143cc5f66f53
     <li><a href="/download/">Download</a></li>
     <li><a href="/exhibition/">Exhibition</a></li><br/>
     <script src="/assets/scripts/google_search.js"></script><gcse:search enableAutoComplete="true"></gcse:search><br/>
@@ -66,11 +62,7 @@
     <li><a href="/">Home</a></li>
     <li><a href="/get-started/">Get Started</a></li>
     <li><a href="/examples/">Examples</a></li>
-<<<<<<< HEAD
     <li><a href="/reference/"></a></li>
-=======
-    <li><a href="/reference/">Reference</a></li>
->>>>>>> 676edcb2b4f2920c6b330e83c3db143cc5f66f53
     <li><a href="/download/">Download</a></li>
     <li><a href="/exhibition/">Exhibition</a></li><br/>
     <script src="/assets/scripts/google_search.js"></script><gcse:search enableAutoComplete="true"></gcse:search><br/>
@@ -86,7 +78,6 @@
   <li><a href="/reference/cv/"></a></li>
   <li><a href="/reference/camera/"></a></li>
   <li><a href="/reference/data/">Data</a></li>
-<<<<<<< HEAD
   <li><a href="/reference/net/"></a></li>
   <li><a href="/reference/sensors/"></a></li>
   <li><a href="/reference/ui/"></a></li>
@@ -100,32 +91,68 @@
 </ul>
           </div>
           <div class="col span_4_of_6 reference">
-            <h3>Reference</h3><p>####KetaiAlertDialog</p>
-<h5 id="-public-class-ketaialertdialog-"><code>public class KetaiAlertDialog</code></h5>
-<p>The KetaiAlertDialog.</p>
-<h5 id="-public-static-void-popup-papplet-_parent-string-_title-string-_message-"><code>public static void popup(PApplet _parent, String _title, String _message)</code></h5>
-=======
-  <li><a href="/reference/net/">Net</a></li>
-  <li><a href="/reference/sensors/">Sensors</a></li>
-  <li><a href="/reference/ui/">UI</a></li>
-  <li><a href="/reference/net/"></a></li>
+            <h3>Reference</h3><h4 id="ketainfc">KetaiNFC</h4>
+<h5 id="-class-ketainfc-implements-createndefmessagecallback-onndefpushcompletecallback-"><code>class KetaiNFC implements CreateNdefMessageCallback,   OnNdefPushCompleteCallback</code></h5>
+<p>The KetaiNFC class provides access the Near Field Communication (NFC) capabilities on supported platforms. This includes access to android Beam (tm) services. </p>
+<p>To access data from NFC services a sketch can define the following methods:<br /><br /> </p>
+<p>void onNFCEvent(String txt) - get text from text formatted NFC tags<br /> void onNFCEvent(byte[] data) - get raw data from NFC tag<br /> void onNFCEvent(URI _uri) - get URI from URI formatted tags<br /><br /> </p>
+<p>void onNFCWrite(boolean success, String message) - get status from a write operation <br /> - message will contain the error if the operation failed</p>
+<h5 id="-ndefformatable-tag-"><code>NdefFormatable tag</code></h5>
+<p>The tag.</p>
+<h5 id="-ndef-ndeftag-"><code>Ndef ndefTag</code></h5>
+<p>The ndef tag.</p>
+<h5 id="-ketainfc-papplet-pparent-"><code>KetaiNFC(PApplet pParent)</code></h5>
+<p>Instantiates a new ketai nfc.</p>
+<ul>
+<li><strong>Parameters:</strong> <code>pParent</code> — the calling sketch/Activity</li>
 </ul>
-          </div>
-          <div class="col span_4_of_6 reference">
-            <h3>Reference</h3><h4 id="ketaialertdialog">KetaiAlertDialog</h4>
-<h5 id="-class-ketaialertdialog-"><code>class KetaiAlertDialog</code></h5>
-<p>The KetaiAlertDialog.</p>
-<h5 id="-static-void-popup-papplet-_parent-string-_title-string-_message-"><code>static void popup(PApplet _parent, String _title, String _message)</code></h5>
->>>>>>> 676edcb2b4f2920c6b330e83c3db143cc5f66f53
-<p>Popup.</p>
+<h5 id="-void-resume-"><code>void resume()</code></h5>
+<p>Resume.</p>
+<h5 id="-void-start-pendingintent-p-"><code>void start(PendingIntent p)</code></h5>
+<p>Start.</p>
+<ul>
+<li><strong>Parameters:</strong> <code>p</code> — the pending intent (used by the android platform for management)</li>
+</ul>
+<h5 id="-void-pause-"><code>void pause()</code></h5>
+<p>Pause. (used by the android platform for management)</p>
+<h5 id="-void-handleintent-intent-intent-"><code>void handleIntent(Intent intent)</code></h5>
+<p>Handle intent.(used by the android platform for management)</p>
+<ul>
+<li><strong>Parameters:</strong> <code>intent</code> — the intent</li>
+</ul>
+<h5 id="-static-ndefrecord-newtextrecord-string-text-locale-locale-boolean-encodeinutf8-"><code>static NdefRecord newTextRecord(String text, Locale locale,    boolean encodeInUtf8)</code></h5>
+<p>New text record.</p>
 <ul>
 <li><strong>Parameters:</strong><ul>
-<li><code>_parent</code> — calling sketch/PApplet/Activity</li>
-<li><code>_title</code> — the title for the dialog</li>
-<li><code>_message</code> — the message inside of the dialog box</li>
+<li><code>text</code> — the text</li>
+<li><code>locale</code> — the locale</li>
+<li><code>encodeInUtf8</code> — the encode in utf8</li>
 </ul>
 </li>
+<li><strong>Returns:</strong> the ndef record</li>
 </ul>
+<h5 id="-void-write-uri-_url-"><code>void write(URI _url)</code></h5>
+<p>Write a URL to a tag</p>
+<ul>
+<li><strong>Parameters:</strong> <code>_url</code> — the _url</li>
+</ul>
+<h5 id="-void-write-string-texttowrite-"><code>void write(String textToWrite)</code></h5>
+<p>Write text to a tag</p>
+<ul>
+<li><strong>Parameters:</strong> <code>textToWrite</code> — the text to write</li>
+</ul>
+<h5 id="-void-beam-string-texttowrite-"><code>void beam(String textToWrite)</code></h5>
+<p>Beam.</p>
+<ul>
+<li><strong>Parameters:</strong> <code>textToWrite</code> — the text to beam to device</li>
+</ul>
+<h5 id="-void-write-byte-_data-"><code>void write(byte[] _data)</code></h5>
+<p>Write generic byte array</p>
+<ul>
+<li><strong>Parameters:</strong> <code>_data</code> — the _data to write</li>
+</ul>
+<h5 id="-void-cancelwrite-"><code>void cancelWrite()</code></h5>
+<p>Cancel pending write operation</p>
 
           </div>
         </div>
