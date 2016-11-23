@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/styles/code_block.css" />
     <link rel="stylesheet" href="/assets/styles/code_example.css">
     <link rel="stylesheet" href="/assets/styles/search.css">
-    <title>Ketai Library - KetaiWiFiDirect</title>
+    <title>Ketai Library - KetaiSimpleFace</title>
   </head>
 </html>
 <body>
@@ -31,7 +31,7 @@
     <li><a href="/">Home</a></li>
     <li><a href="/get-started/">Get Started</a></li>
     <li><a href="/examples/">Examples</a></li>
-    <li><a href="/reference/">Reference</a></li>
+    <li><a href="/reference/"></a></li>
     <li><a href="/download/">Download</a></li>
     <li><a href="/exhibition/">Exhibition</a></li><br/>
     <script src="/assets/scripts/google_search.js"></script><gcse:search enableAutoComplete="true"></gcse:search><br/>
@@ -62,7 +62,7 @@
     <li><a href="/">Home</a></li>
     <li><a href="/get-started/">Get Started</a></li>
     <li><a href="/examples/">Examples</a></li>
-    <li><a href="/reference/">Reference</a></li>
+    <li><a href="/reference/"></a></li>
     <li><a href="/download/">Download</a></li>
     <li><a href="/exhibition/">Exhibition</a></li><br/>
     <script src="/assets/scripts/google_search.js"></script><gcse:search enableAutoComplete="true"></gcse:search><br/>
@@ -75,67 +75,28 @@
             <hr>
 <h4><b>Other Packages:</b></h4>
 <ul class="sidelist_menu">
-  <li><a href="/reference/cv/">CV</a></li>
-  <li><a href="/reference/camera/">Camera</a></li>
-  <li><a href="/reference/data/">Data</a></li>
-  <li><a href="/reference/net/">Net</a></li>
-  <li><a href="/reference/sensors/">Sensors</a></li>
-  <li><a href="/reference/ui/">UI</a></li>
-  <li><a href="/reference/net/"></a></li>
+  <li><a href="/reference/camera/">camera</a></li>
+  <li><a href="/reference/cv/">cv</a></li>
+  <li><a href="/reference/data/">data</a></li>
+  <li><a href="/reference/net/">net</a></li>
+  <li><a href="/reference/sensors/">sensors</a></li>
+  <li><a href="/reference/ui/">ui</a></li>
 </ul>
           </div>
           <div class="col span_4_of_6 reference">
-            <h3>Reference</h3><h4 id="ketaiwifidirect">KetaiWiFiDirect</h4>
-<h5 id="-class-ketaiwifidirect-extends-broadcastreceiver-implements-channellistener-connectioninfolistener-actionlistener-peerlistlistener-"><code>class KetaiWiFiDirect extends BroadcastReceiver implements   ChannelListener, ConnectionInfoListener, ActionListener,   PeerListListener</code></h5>
-<p>The KetaiWiFiDirect class is an experimental class that provides a wifi direct access to a sketch. WifiDirect provides peer-to-peer networking between devices. No wireless infrastructure is needed.</p>
-<h5 id="-papplet-parent-"><code>PApplet parent</code></h5>
-<p>The parent.</p>
-<h5 id="-ketaiwifidirect-papplet-_parent-"><code>KetaiWiFiDirect(PApplet _parent)</code></h5>
-<p>Instantiates a new ketai wi fi direct object</p>
+            <h3>Reference</h3><p>####KetaiSimpleFace</p>
+<h5 id="-public-class-ketaisimpleface-"><code>public class KetaiSimpleFace</code></h5>
+<p>KetaiSimpleFace provide a utility class for faces found by the android face finding service.</p>
+<h5 id="-public-pvector-location-"><code>public PVector location</code></h5>
+<p>The location.</p>
+<h5 id="-public-float-distance-"><code>public float distance</code></h5>
+<p>The distance.</p>
+<h5 id="-public-float-confidence-"><code>public float confidence</code></h5>
+<p>The confidence.</p>
+<h5 id="-public-ketaisimpleface-face-f-"><code>public KetaiSimpleFace(Face f)</code></h5>
+<p>Instantiates a new ketai simple face.</p>
 <ul>
-<li><strong>Parameters:</strong> <code>_parent</code> — the calling sketch/Activity/PApplet</li>
-</ul>
-<h5 id="-void-setiswifip2penabled-boolean-iswifip2penabled-"><code>void setIsWifiP2pEnabled(boolean isWifiP2pEnabled)</code></h5>
-<p>Sets the checks if wifi p2p enabled.</p>
-<ul>
-<li><strong>Parameters:</strong> <code>isWifiP2pEnabled</code> — the new checks if is wifi p2p enabled</li>
-</ul>
-<h5 id="-void-resume-"><code>void resume()</code></h5>
-<p>Resume. (used by android activity administration)</p>
-<h5 id="-void-pause-"><code>void pause()</code></h5>
-<p>Pause.(used by android activity administration)</p>
-<h5 id="-void-disconnect-"><code>void disconnect()</code></h5>
-<p>Disconnect. clean out resources</p>
-<h5 id="-void-canceldisconnect-"><code>void cancelDisconnect()</code></h5>
-<p>Cancel disconnect.</p>
-<h5 id="-void-getconnectioninfo-"><code>void getConnectionInfo()</code></h5>
-<p>Gets the connection information.</p>
-<ul>
-<li><strong>Returns:</strong> the connection info</li>
-</ul>
-<h5 id="-string-getipaddress-"><code>String getIPAddress()</code></h5>
-<p>Gets the iP address used by the connection.</p>
-<ul>
-<li><strong>Returns:</strong> the iP address</li>
-</ul>
-<h5 id="-void-discover-"><code>void discover()</code></h5>
-<p>Discover.</p>
-<h5 id="-string-gethardwareaddress-"><code>String getHardwareAddress()</code></h5>
-<p>Gets the hardware address of the wifi interface</p>
-<ul>
-<li><strong>Returns:</strong> the hardware address</li>
-</ul>
-<h5 id="-void-reset-"><code>void reset()</code></h5>
-<p>Reset.</p>
-<h5 id="-arraylist-string-getpeernamelist-"><code>ArrayList&lt;String&gt; getPeerNameList()</code></h5>
-<p>Gets the peer name list.</p>
-<ul>
-<li><strong>Returns:</strong> the peer name list</li>
-</ul>
-<h5 id="-void-connect-string-devicename-"><code>void connect(String deviceName)</code></h5>
-<p>Connect to a device by name.</p>
-<ul>
-<li><strong>Parameters:</strong> <code>deviceName</code> — the device name</li>
+<li><strong>Parameters:</strong> <code>f</code> — the Face found.</li>
 </ul>
 
           </div>

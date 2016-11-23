@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/styles/code_block.css" />
     <link rel="stylesheet" href="/assets/styles/code_example.css">
     <link rel="stylesheet" href="/assets/styles/search.css">
-    <title>Ketai Library - TextRecord</title>
+    <title>Ketai Library - ParsedNdefRecord</title>
   </head>
 </html>
 <body>
@@ -31,7 +31,7 @@
     <li><a href="/">Home</a></li>
     <li><a href="/get-started/">Get Started</a></li>
     <li><a href="/examples/">Examples</a></li>
-    <li><a href="/reference/">Reference</a></li>
+    <li><a href="/reference/"></a></li>
     <li><a href="/download/">Download</a></li>
     <li><a href="/exhibition/">Exhibition</a></li><br/>
     <script src="/assets/scripts/google_search.js"></script><gcse:search enableAutoComplete="true"></gcse:search><br/>
@@ -62,7 +62,7 @@
     <li><a href="/">Home</a></li>
     <li><a href="/get-started/">Get Started</a></li>
     <li><a href="/examples/">Examples</a></li>
-    <li><a href="/reference/">Reference</a></li>
+    <li><a href="/reference/"></a></li>
     <li><a href="/download/">Download</a></li>
     <li><a href="/exhibition/">Exhibition</a></li><br/>
     <script src="/assets/scripts/google_search.js"></script><gcse:search enableAutoComplete="true"></gcse:search><br/>
@@ -75,40 +75,22 @@
             <hr>
 <h4><b>Other Packages:</b></h4>
 <ul class="sidelist_menu">
-  <li><a href="/reference/cv/">CV</a></li>
-  <li><a href="/reference/camera/">Camera</a></li>
-  <li><a href="/reference/data/">Data</a></li>
-  <li><a href="/reference/net/">Net</a></li>
-  <li><a href="/reference/sensors/">Sensors</a></li>
-  <li><a href="/reference/ui/">UI</a></li>
-  <li><a href="/reference/net/"></a></li>
+  <li><a href="/reference/camera/">camera</a></li>
+  <li><a href="/reference/cv/">cv</a></li>
+  <li><a href="/reference/data/">data</a></li>
+  <li><a href="/reference/net/">net</a></li>
+  <li><a href="/reference/sensors/">sensors</a></li>
+  <li><a href="/reference/ui/">ui</a></li>
 </ul>
           </div>
           <div class="col span_4_of_6 reference">
-            <h3>Reference</h3><h4 id="textrecord">TextRecord</h4>
-<h5 id="-class-textrecord-implements-parsedndefrecord-"><code>class TextRecord implements ParsedNdefRecord</code></h5>
-<p>An NFC Text Record.</p>
-<h5 id="-string-gettext-"><code>String getText()</code></h5>
-<p>Gets the text.</p>
+            <h3>Reference</h3><p>####ParsedNdefRecord</p>
+<h5 id="-public-interface-parsedndefrecord-"><code>public interface ParsedNdefRecord</code></h5>
+<p>The Interface ParsedNdefRecord.</p>
+<h5 id="-public-string-gettag-"><code>public String getTag()</code></h5>
+<p>Returns the tag.</p>
 <ul>
-<li><strong>Returns:</strong> the text</li>
-</ul>
-<h5 id="-string-getlanguagecode-"><code>String getLanguageCode()</code></h5>
-<p>Returns the ISO/IANA language code associated with this text element.</p>
-<ul>
-<li><strong>Returns:</strong> the language code</li>
-</ul>
-<h5 id="-static-textrecord-parse-ndefrecord-record-"><code>static TextRecord parse(NdefRecord record)</code></h5>
-<p>Parses the.</p>
-<ul>
-<li><strong>Parameters:</strong> <code>record</code> — the record</li>
-<li><strong>Returns:</strong> the text record</li>
-</ul>
-<h5 id="-static-boolean-istext-ndefrecord-record-"><code>static boolean isText(NdefRecord record)</code></h5>
-<p>Checks if is text.</p>
-<ul>
-<li><strong>Parameters:</strong> <code>record</code> — the record</li>
-<li><strong>Returns:</strong> true, if is text</li>
+<li><strong>Returns:</strong> the tag</li>
 </ul>
 
           </div>

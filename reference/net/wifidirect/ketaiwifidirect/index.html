@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/styles/code_block.css" />
     <link rel="stylesheet" href="/assets/styles/code_example.css">
     <link rel="stylesheet" href="/assets/styles/search.css">
-    <title>Ketai Library - NdefMessageParser</title>
+    <title>Ketai Library - KetaiWiFiDirect</title>
   </head>
 </html>
 <body>
@@ -31,7 +31,7 @@
     <li><a href="/">Home</a></li>
     <li><a href="/get-started/">Get Started</a></li>
     <li><a href="/examples/">Examples</a></li>
-    <li><a href="/reference/">Reference</a></li>
+    <li><a href="/reference/"></a></li>
     <li><a href="/download/">Download</a></li>
     <li><a href="/exhibition/">Exhibition</a></li><br/>
     <script src="/assets/scripts/google_search.js"></script><gcse:search enableAutoComplete="true"></gcse:search><br/>
@@ -62,7 +62,7 @@
     <li><a href="/">Home</a></li>
     <li><a href="/get-started/">Get Started</a></li>
     <li><a href="/examples/">Examples</a></li>
-    <li><a href="/reference/">Reference</a></li>
+    <li><a href="/reference/"></a></li>
     <li><a href="/download/">Download</a></li>
     <li><a href="/exhibition/">Exhibition</a></li><br/>
     <script src="/assets/scripts/google_search.js"></script><gcse:search enableAutoComplete="true"></gcse:search><br/>
@@ -75,30 +75,85 @@
             <hr>
 <h4><b>Other Packages:</b></h4>
 <ul class="sidelist_menu">
-  <li><a href="/reference/cv/">CV</a></li>
-  <li><a href="/reference/camera/">Camera</a></li>
-  <li><a href="/reference/data/">Data</a></li>
-  <li><a href="/reference/net/">Net</a></li>
-  <li><a href="/reference/sensors/">Sensors</a></li>
-  <li><a href="/reference/ui/">UI</a></li>
-  <li><a href="/reference/net/"></a></li>
+  <li><a href="/reference/camera/">camera</a></li>
+  <li><a href="/reference/cv/">cv</a></li>
+  <li><a href="/reference/data/">data</a></li>
+  <li><a href="/reference/net/">net</a></li>
+  <li><a href="/reference/sensors/">sensors</a></li>
+  <li><a href="/reference/ui/">ui</a></li>
 </ul>
           </div>
           <div class="col span_4_of_6 reference">
-            <h3>Reference</h3><h4 id="ndefmessageparser">NdefMessageParser</h4>
-<h5 id="-class-ndefmessageparser-"><code>class NdefMessageParser</code></h5>
-<p>The Class NdefMessageParser.</p>
-<h5 id="-static-list-parsedndefrecord-parse-ndefmessage-message-"><code>static List&lt;ParsedNdefRecord&gt; parse(NdefMessage message)</code></h5>
-<p>Parse an NdefMessage.</p>
+            <h3>Reference</h3><p>####KetaiWiFiDirect</p>
+<h5 id="-public-class-ketaiwifidirect-extends-broadcastreceiver-implements-channellistener-connectioninfolistener-actionlistener-peerlistlistener-"><code>public class KetaiWiFiDirect extends BroadcastReceiver implements   ChannelListener, ConnectionInfoListener, ActionListener,   PeerListListener</code></h5>
+<p>The KetaiWiFiDirect class is an experimental class that provides a wifi direct access to a sketch. WifiDirect provides peer-to-peer networking between devices. No wireless infrastructure is needed.</p>
+<h5 id="-papplet-parent-"><code>PApplet parent</code></h5>
+<p>The parent.</p>
+<h5 id="-private-wifip2pmanager-manager-"><code>private WifiP2pManager manager</code></h5>
+<p>The manager.</p>
+<h5 id="-private-boolean-iswifip2penabled-false-"><code>private boolean isWifiP2pEnabled = false</code></h5>
+<p>The is wifi p2p enabled.</p>
+<h5 id="-private-boolean-retrychannel-false-"><code>private boolean retryChannel = false</code></h5>
+<p>The retry channel.</p>
+<h5 id="-private-list-wifip2pdevice-peers-new-arraylist-wifip2pdevice-"><code>private List&lt;WifiP2pDevice&gt; peers = new ArrayList&lt;WifiP2pDevice&gt;()</code></h5>
+<p>The peers.</p>
+<h5 id="-private-final-intentfilter-intentfilter-new-intentfilter-"><code>private final IntentFilter intentFilter = new IntentFilter()</code></h5>
+<p>The intent filter.</p>
+<h5 id="-private-channel-channel-"><code>private Channel channel</code></h5>
+<p>The channel.</p>
+<h5 id="-private-string-ip-"><code>private String ip = &quot;&quot;</code></h5>
+<p>The ip.</p>
+<h5 id="-public-ketaiwifidirect-papplet-_parent-"><code>public KetaiWiFiDirect(PApplet _parent)</code></h5>
+<p>Instantiates a new ketai wi fi direct object</p>
 <ul>
-<li><strong>Parameters:</strong> <code>message</code> — the message</li>
-<li><strong>Returns:</strong> the list</li>
+<li><strong>Parameters:</strong> <code>_parent</code> — the calling sketch/Activity/PApplet</li>
 </ul>
-<h5 id="-static-list-parsedndefrecord-getrecords-ndefrecord-records-"><code>static List&lt;ParsedNdefRecord&gt; getRecords(NdefRecord[] records)</code></h5>
-<p>Gets the records.</p>
+<h5 id="-public-void-setiswifip2penabled-boolean-iswifip2penabled-"><code>public void setIsWifiP2pEnabled(boolean isWifiP2pEnabled)</code></h5>
+<p>Sets the checks if wifi p2p enabled.</p>
 <ul>
-<li><strong>Parameters:</strong> <code>records</code> — the records</li>
-<li><strong>Returns:</strong> the records</li>
+<li><strong>Parameters:</strong> <code>isWifiP2pEnabled</code> — the new checks if is wifi p2p enabled</li>
+</ul>
+<h5 id="-public-void-resume-"><code>public void resume()</code></h5>
+<p>Resume. (used by android activity administration)</p>
+<h5 id="-public-void-pause-"><code>public void pause()</code></h5>
+<p>Pause.(used by android activity administration)</p>
+<h5 id="-private-void-connecttoconfig-wifip2pconfig-config-"><code>private void connectToConfig(WifiP2pConfig config)</code></h5>
+<p>Connect using a specified configuration</p>
+<ul>
+<li><strong>Parameters:</strong> <code>config</code> — the config</li>
+</ul>
+<h5 id="-public-void-disconnect-"><code>public void disconnect()</code></h5>
+<p>Disconnect. clean out resources</p>
+<h5 id="-public-void-canceldisconnect-"><code>public void cancelDisconnect()</code></h5>
+<p>Cancel disconnect.</p>
+<h5 id="-public-void-getconnectioninfo-"><code>public void getConnectionInfo()</code></h5>
+<p>Gets the connection information.</p>
+<ul>
+<li><strong>Returns:</strong> the connection info</li>
+</ul>
+<h5 id="-public-string-getipaddress-"><code>public String getIPAddress()</code></h5>
+<p>Gets the iP address used by the connection.</p>
+<ul>
+<li><strong>Returns:</strong> the iP address</li>
+</ul>
+<h5 id="-public-void-discover-"><code>public void discover()</code></h5>
+<p>Discover.</p>
+<h5 id="-public-string-gethardwareaddress-"><code>public String getHardwareAddress()</code></h5>
+<p>Gets the hardware address of the wifi interface</p>
+<ul>
+<li><strong>Returns:</strong> the hardware address</li>
+</ul>
+<h5 id="-public-void-reset-"><code>public void reset()</code></h5>
+<p>Reset.</p>
+<h5 id="-public-arraylist-string-getpeernamelist-"><code>public ArrayList&lt;String&gt; getPeerNameList()</code></h5>
+<p>Gets the peer name list.</p>
+<ul>
+<li><strong>Returns:</strong> the peer name list</li>
+</ul>
+<h5 id="-public-void-connect-string-devicename-"><code>public void connect(String deviceName)</code></h5>
+<p>Connect to a device by name.</p>
+<ul>
+<li><strong>Parameters:</strong> <code>deviceName</code> — the device name</li>
 </ul>
 
           </div>

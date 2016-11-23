@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/styles/code_block.css" />
     <link rel="stylesheet" href="/assets/styles/code_example.css">
     <link rel="stylesheet" href="/assets/styles/search.css">
-    <title>Ketai Library - KBluetoothListener</title>
+    <title>Ketai Library - UriRecord</title>
   </head>
 </html>
 <body>
@@ -31,7 +31,7 @@
     <li><a href="/">Home</a></li>
     <li><a href="/get-started/">Get Started</a></li>
     <li><a href="/examples/">Examples</a></li>
-    <li><a href="/reference/">Reference</a></li>
+    <li><a href="/reference/"></a></li>
     <li><a href="/download/">Download</a></li>
     <li><a href="/exhibition/">Exhibition</a></li><br/>
     <script src="/assets/scripts/google_search.js"></script><gcse:search enableAutoComplete="true"></gcse:search><br/>
@@ -62,7 +62,7 @@
     <li><a href="/">Home</a></li>
     <li><a href="/get-started/">Get Started</a></li>
     <li><a href="/examples/">Examples</a></li>
-    <li><a href="/reference/">Reference</a></li>
+    <li><a href="/reference/"></a></li>
     <li><a href="/download/">Download</a></li>
     <li><a href="/exhibition/">Exhibition</a></li><br/>
     <script src="/assets/scripts/google_search.js"></script><gcse:search enableAutoComplete="true"></gcse:search><br/>
@@ -75,33 +75,59 @@
             <hr>
 <h4><b>Other Packages:</b></h4>
 <ul class="sidelist_menu">
-  <li><a href="/reference/cv/">CV</a></li>
-  <li><a href="/reference/camera/">Camera</a></li>
-  <li><a href="/reference/data/">Data</a></li>
-  <li><a href="/reference/net/">Net</a></li>
-  <li><a href="/reference/sensors/">Sensors</a></li>
-  <li><a href="/reference/ui/">UI</a></li>
-  <li><a href="/reference/net/"></a></li>
+  <li><a href="/reference/camera/">camera</a></li>
+  <li><a href="/reference/cv/">cv</a></li>
+  <li><a href="/reference/data/">data</a></li>
+  <li><a href="/reference/net/">net</a></li>
+  <li><a href="/reference/sensors/">sensors</a></li>
+  <li><a href="/reference/ui/">ui</a></li>
 </ul>
           </div>
           <div class="col span_4_of_6 reference">
-            <h3>Reference</h3><h4 id="kbluetoothlistener">KBluetoothListener</h4>
-<h5 id="-class-kbluetoothlistener-extends-thread-"><code>class KBluetoothListener extends Thread</code></h5>
-<p>The listener interface for receiving KBluetooth events. The class that is interested in processing a KBluetooth event implements this interface, and the object created with that class is registered with a component using the component&#39;s <code>addKBluetoothListener<code> method. When the KBluetooth event occurs, that object&#39;s appropriate method is invoked.</p>
+            <h3>Reference</h3><p>####UriRecord</p>
+<h5 id="-public-class-urirecord-implements-parsedndefrecord-"><code>public class UriRecord implements ParsedNdefRecord</code></h5>
+<p>A parsed record containing a Uri.</p>
+<h5 id="-public-static-final-string-record_type-urirecord-"><code>public static final String RECORD_TYPE = &quot;UriRecord&quot;</code></h5>
+<p>The Constant RECORD_TYPE.</p>
+<h5 id="-suppresswarnings-serial-private-static-final-hashmap-byte-string-uri_prefix_map-new-hashmap-byte-string-"><code>@SuppressWarnings(&quot;serial&quot;)  private static final HashMap&lt;Byte, String&gt; URI_PREFIX_MAP = new HashMap&lt;Byte, String&gt;()</code></h5>
+<p>NFC Forum &quot;URI Record Type Definition&quot; </p>
+<p>This is a mapping of &quot;URI Identifier Codes&quot; to URI string prefixes, per section 3.2.2 of the NFC Forum URI Record Type Definition document.</p>
+<h5 id="-private-final-uri-muri-"><code>private final Uri mUri</code></h5>
+<p>The m uri.</p>
+<h5 id="-private-urirecord-uri-uri-"><code>private UriRecord(Uri uri)</code></h5>
+<p>Instantiates a new uri record.</p>
 <ul>
-<li><strong>See also:</strong> KBluetoothEvent</li>
+<li><strong>Parameters:</strong> <code>uri</code> — the uri</li>
 </ul>
-<h5 id="-kbluetoothlistener-ketaibluetooth-btm-boolean-secure-"><code>KBluetoothListener(KetaiBluetooth btm, boolean secure)</code></h5>
-<p>Instantiates a new k bluetooth listener.</p>
+<h5 id="-public-uri-geturi-"><code>public Uri getUri()</code></h5>
+<p>Gets the uri.</p>
 <ul>
-<li><strong>Parameters:</strong><ul>
-<li><code>btm</code> — the Bluetooth Managing class</li>
-<li><code>secure</code> — secure setting</li>
+<li><strong>Returns:</strong> the uri</li>
 </ul>
-</li>
+<h5 id="-public-static-urirecord-parse-ndefrecord-record-"><code>public static UriRecord parse(NdefRecord record)</code></h5>
+<p>Convert {@link android.nfc.NdefRecord} into a {@link android.net.Uri}. This will handle both TNF_WELL_KNOWN / RTD_URI and TNF_ABSOLUTE_URI.</p>
+<ul>
+<li><strong>Parameters:</strong> <code>record</code> — the record</li>
+<li><strong>Returns:</strong> the uri record</li>
 </ul>
-<h5 id="-void-cancel-"><code>void cancel()</code></h5>
-<p>Cancel-close out resources</p>
+<h5 id="-private-static-urirecord-parseabsolute-ndefrecord-record-"><code>private static UriRecord parseAbsolute(NdefRecord record)</code></h5>
+<p>Parse and absolute URI record.</p>
+<ul>
+<li><strong>Parameters:</strong> <code>record</code> — the record</li>
+<li><strong>Returns:</strong> the uri record</li>
+</ul>
+<h5 id="-private-static-urirecord-parsewellknown-ndefrecord-record-"><code>private static UriRecord parseWellKnown(NdefRecord record)</code></h5>
+<p>Parse an well known URI record.</p>
+<ul>
+<li><strong>Parameters:</strong> <code>record</code> — the record</li>
+<li><strong>Returns:</strong> the uri record</li>
+</ul>
+<h5 id="-public-static-boolean-isuri-ndefrecord-record-"><code>public static boolean isUri(NdefRecord record)</code></h5>
+<p>Checks if is uri.</p>
+<ul>
+<li><strong>Parameters:</strong> <code>record</code> — the record</li>
+<li><strong>Returns:</strong> true, if is uri</li>
+</ul>
 
           </div>
         </div>
