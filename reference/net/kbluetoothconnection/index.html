@@ -39,6 +39,7 @@
     <li><a href="https://github.com/ketai/ketai/pulls" class="misc_link"><i class="fa fa-code"> Your Help</i></a></li>
     <li><a href="https://github.com/ketai/ketai/issues" class="misc_link"><i class="fa fa-comment-o"> Forum</i></a></li>
     <li><a href="https://twitter.com/ketailibrary" class="misc_link"><i class="fa fa-twitter"> Twitter</i></a></li>
+    <li><a href="https://www.mobileprocessing.org" class="misc_link"><i class="fa fa-book"> RAD Book </i></a></li>
   </div>
 </ul>
     </div>
@@ -70,6 +71,7 @@
     <li><a href="https://github.com/ketai/ketai/pulls" class="misc_link"><i class="fa fa-code"> Your Help</i></a></li>
     <li><a href="https://github.com/ketai/ketai/issues" class="misc_link"><i class="fa fa-comment-o"> Forum</i></a></li>
     <li><a href="https://twitter.com/ketailibrary" class="misc_link"><i class="fa fa-twitter"> Twitter</i></a></li>
+    <li><a href="https://www.mobileprocessing.org" class="misc_link"><i class="fa fa-book"> RAD Book </i></a></li>
   </div>
 </ul>
             <hr>
@@ -87,11 +89,11 @@
             <h3>Reference</h3><h4 id="kbluetoothconnection">KBluetoothConnection</h4>
 <h5 id="-public-class-kbluetoothconnection-extends-thread-"><code>public class KBluetoothConnection extends Thread</code></h5>
 <p>The Class KBluetoothConnection.</p>
-<h5 id="-private-final-bluetoothsocket-mmsocket-"><code>private final BluetoothSocket mmSocket</code></h5>
+<h5 id="-private-bluetoothsocket-mmsocket-"><code>private BluetoothSocket mmSocket</code></h5>
 <p>The mm socket.</p>
-<h5 id="-private-final-inputstream-mminstream-"><code>private final InputStream mmInStream</code></h5>
+<h5 id="-private-inputstream-mminstream-"><code>private InputStream mmInStream</code></h5>
 <p>The mm in stream.</p>
-<h5 id="-private-final-outputstream-mmoutstream-"><code>private final OutputStream mmOutStream</code></h5>
+<h5 id="-private-outputstream-mmoutstream-"><code>private OutputStream mmOutStream</code></h5>
 <p>The mm out stream.</p>
 <h5 id="-private-boolean-isconnected-false-"><code>private boolean isConnected = false</code></h5>
 <p>The is connected.</p>
@@ -100,11 +102,12 @@
 <h5 id="-private-ketaibluetooth-btm-"><code>private KetaiBluetooth btm</code></h5>
 <p>The btm.</p>
 <h5 id="-public-kbluetoothconnection-ketaibluetooth-_btm-bluetoothsocket-socket-"><code>public KBluetoothConnection(KetaiBluetooth _btm, BluetoothSocket socket)</code></h5>
-<p>Instantiates a new bluetooth connection.</p>
+<p>Instantiates a new bluetooth connection. </p>
+<p>the Bluetooth managing class the socket reference for the connection</p>
 <ul>
 <li><strong>Parameters:</strong><ul>
-<li><code>_btm</code> — the Bluetooth managing class</li>
-<li><code>socket</code> — the socket reference for the connection</li>
+<li><code>_btm</code> — </li>
+<li><code>socket</code> — </li>
 </ul>
 </li>
 </ul>
@@ -124,9 +127,10 @@
 <li><strong>Returns:</strong> true, if is connected</li>
 </ul>
 <h5 id="-public-void-write-byte-buffer-"><code>public void write(byte[] buffer)</code></h5>
-<p>Write data to the connection</p>
+<p>Write data to the connection </p>
+<p>the buffer</p>
 <ul>
-<li><strong>Parameters:</strong> <code>buffer</code> — the buffer</li>
+<li><strong>Parameters:</strong> <code>buffer</code> — </li>
 </ul>
 <h5 id="-public-void-cancel-"><code>public void cancel()</code></h5>
 <p>Cancel, close out the resource</p>

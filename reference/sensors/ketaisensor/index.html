@@ -39,6 +39,7 @@
     <li><a href="https://github.com/ketai/ketai/pulls" class="misc_link"><i class="fa fa-code"> Your Help</i></a></li>
     <li><a href="https://github.com/ketai/ketai/issues" class="misc_link"><i class="fa fa-comment-o"> Forum</i></a></li>
     <li><a href="https://twitter.com/ketailibrary" class="misc_link"><i class="fa fa-twitter"> Twitter</i></a></li>
+    <li><a href="https://www.mobileprocessing.org" class="misc_link"><i class="fa fa-book"> RAD Book </i></a></li>
   </div>
 </ul>
     </div>
@@ -70,6 +71,7 @@
     <li><a href="https://github.com/ketai/ketai/pulls" class="misc_link"><i class="fa fa-code"> Your Help</i></a></li>
     <li><a href="https://github.com/ketai/ketai/issues" class="misc_link"><i class="fa fa-comment-o"> Forum</i></a></li>
     <li><a href="https://twitter.com/ketailibrary" class="misc_link"><i class="fa fa-twitter"> Twitter</i></a></li>
+    <li><a href="https://www.mobileprocessing.org" class="misc_link"><i class="fa fa-book"> RAD Book </i></a></li>
   </div>
 </ul>
             <hr>
@@ -94,6 +96,8 @@
 <p>The is registered.</p>
 <h5 id="-private-papplet-parent-"><code>private PApplet parent</code></h5>
 <p>The parent.</p>
+<h5 id="-private-sensorqueue-eventqueue-"><code>private SensorQueue eventQueue</code></h5>
+<p>The event queue.</p>
 <h5 id="-private-method-onsensoreventmethod-"><code>private Method onSensorEventMethod</code></h5>
 <p>The on sensor event method.</p>
 <h5 id="-float-accelerometerdata-magnetometerdata-"><code>float[] accelerometerData, magnetometerData</code></h5>
@@ -106,6 +110,8 @@
 <p>The time of last update.</p>
 <h5 id="-final-static-string-service_description-android-sensors-"><code>final static String SERVICE_DESCRIPTION = &quot;Android Sensors.&quot;</code></h5>
 <p>The Constant SERVICE_DESCRIPTION.</p>
+<h5 id="-private-float-rotationmat-"><code>private float[] rotationMat</code></h5>
+<p>Utility arrays used in the getOrientation() method.</p>
 <h5 id="-public-ketaisensor-papplet-pparent-"><code>public KetaiSensor(PApplet pParent)</code></h5>
 <p>Instantiates a new ketai sensor. </p>
 <p>PApplet/sketch instance</p>
@@ -128,6 +134,12 @@
 <p>the new delay interval</p>
 <ul>
 <li><strong>Parameters:</strong> <code>pDelayInterval</code> — </li>
+</ul>
+<h5 id="-public-void-setsamplingrate-int-psamplinginterval-"><code>public void setSamplingRate(int pSamplingInterval)</code></h5>
+<p>Sets the delay interval. </p>
+<p>the new sampling interval. Can be one of SENSOR_DELAY_NORMAL, SENSOR_DELAY_UI, SENSOR_DELAY_GAME, SENSOR_DELAY_FASTEST or the delay in microseconds.</p>
+<ul>
+<li><strong>Parameters:</strong> <code>pSamplingInterval</code> — </li>
 </ul>
 <h5 id="-public-void-enableaccelerometer-"><code>public void enableAccelerometer()</code></h5>
 <p>Enable accelerometer.</p>
@@ -223,7 +235,7 @@
 <ul>
 <li><strong>Returns:</strong> true, if is magentic field available</li>
 </ul>
-<h5 id="-public-boolean-isorientationavailable-"><code>public boolean isOrientationAvailable()</code></h5>
+<h5 id="-suppresswarnings-deprecation-public-boolean-isorientationavailable-"><code>@SuppressWarnings(&quot;deprecation&quot;)  public boolean isOrientationAvailable()</code></h5>
 <p>Checks if is orientation available.</p>
 <ul>
 <li><strong>Returns:</strong> true, if is orientation available</li>
@@ -243,7 +255,7 @@
 <ul>
 <li><strong>Returns:</strong> true, if is pressure available</li>
 </ul>
-<h5 id="-public-boolean-istemperatureavailable-"><code>public boolean isTemperatureAvailable()</code></h5>
+<h5 id="-suppresswarnings-deprecation-public-boolean-istemperatureavailable-"><code>@SuppressWarnings(&quot;deprecation&quot;)  public boolean isTemperatureAvailable()</code></h5>
 <p>Checks if is temperature available.</p>
 <ul>
 <li><strong>Returns:</strong> true, if is temperature available</li>
@@ -298,7 +310,7 @@
 <ul>
 <li><strong>Returns:</strong> true, if is started</li>
 </ul>
-<h5 id="-public-void-start-"><code>public void start()</code></h5>
+<h5 id="-suppresswarnings-deprecation-public-void-start-"><code>@SuppressWarnings(&quot;deprecation&quot;)  public void start()</code></h5>
 <p>Start services.</p>
 <h5 id="-public-void-stop-"><code>public void stop()</code></h5>
 <p>Stop services.</p>
@@ -351,6 +363,13 @@
 <p>Gets the orientation.</p>
 <ul>
 <li><strong>Returns:</strong> the orientation</li>
+</ul>
+<h5 id="-public-float-getorientation-float-v-"><code>public float[] getOrientation(float[] v)</code></h5>
+<p>Gets the orientation. </p>
+<p>the vector to hold the orientation values</p>
+<ul>
+<li><strong>Parameters:</strong> <code>v</code> — </li>
+<li><strong>Returns:</strong> the orientation vector</li>
 </ul>
 
           </div>

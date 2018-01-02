@@ -39,6 +39,7 @@
     <li><a href="https://github.com/ketai/ketai/pulls" class="misc_link"><i class="fa fa-code"> Your Help</i></a></li>
     <li><a href="https://github.com/ketai/ketai/issues" class="misc_link"><i class="fa fa-comment-o"> Forum</i></a></li>
     <li><a href="https://twitter.com/ketailibrary" class="misc_link"><i class="fa fa-twitter"> Twitter</i></a></li>
+    <li><a href="https://www.mobileprocessing.org" class="misc_link"><i class="fa fa-book"> RAD Book </i></a></li>
   </div>
 </ul>
     </div>
@@ -70,6 +71,7 @@
     <li><a href="https://github.com/ketai/ketai/pulls" class="misc_link"><i class="fa fa-code"> Your Help</i></a></li>
     <li><a href="https://github.com/ketai/ketai/issues" class="misc_link"><i class="fa fa-comment-o"> Forum</i></a></li>
     <li><a href="https://twitter.com/ketailibrary" class="misc_link"><i class="fa fa-twitter"> Twitter</i></a></li>
+    <li><a href="https://www.mobileprocessing.org" class="misc_link"><i class="fa fa-book"> RAD Book </i></a></li>
   </div>
 </ul>
             <hr>
@@ -87,9 +89,9 @@
             <h3>Reference</h3><h4 id="ketaibluetooth">KetaiBluetooth</h4>
 <h5 id="-public-class-ketaibluetooth-"><code>public class KetaiBluetooth</code></h5>
 <p>The Class KetaiBluetooth manages the bluetooth connections and service on the android device. This class has been tested and can manage multiple simultaneous bluetooth connections. The maximum number of connections varied by device limitations but 3 simultaneous connections were typical. </p>
-<p>To receive data from bluetooth connections a sketch should define the following method:<br /> </p>
-<p>void onBluetoothDataEvent(String who, byte[] data)<br /> </p>
-<p>who - the name of the device sending the data<br /> data - byte array of the data received<br /></p>
+<p>To receive data from bluetooth connections a sketch should define the following method:<br> </p>
+<p>void onBluetoothDataEvent(String who, byte[] data)<br> </p>
+<p>who - the name of the device sending the data<br> data - byte array of the data received<br></p>
 <h5 id="-protected-papplet-parent-"><code>protected PApplet parent</code></h5>
 <p>The parent.</p>
 <h5 id="-protected-bluetoothadapter-bluetoothadapter-"><code>protected BluetoothAdapter bluetoothAdapter</code></h5>
@@ -108,9 +110,9 @@
 <p>The is started.</p>
 <h5 id="-protected-method-onbluetoothdataeventmethod-"><code>protected Method onBluetoothDataEventMethod</code></h5>
 <p>The on bluetooth data event method.</p>
-<h5 id="-protected-uuid-my_uuid_secure-uuid-fromstring-00001101-0000-1000-8000-00805f9b34fb-"><code>protected UUID MY_UUID_SECURE = UUID    .fromString(&quot;00001101-0000-1000-8000-00805F9B34FB&quot;)</code></h5>
+<h5 id="-protected-uuid-my_uuid_secure-uuid-fromstring-00001101-0000-1000-8000-00805f9b34fb-"><code>protected UUID MY_UUID_SECURE = UUID.fromString(&quot;00001101-0000-1000-8000-00805F9B34FB&quot;)</code></h5>
 <p>The my uuid secure.</p>
-<h5 id="-protected-uuid-my_uuid_insecure-uuid-fromstring-00001101-0000-1000-8000-00805f9b34fb-"><code>protected UUID MY_UUID_INSECURE = UUID    .fromString(&quot;00001101-0000-1000-8000-00805F9B34FB&quot;)</code></h5>
+<h5 id="-protected-uuid-my_uuid_insecure-uuid-fromstring-00001101-0000-1000-8000-00805f9b34fb-"><code>protected UUID MY_UUID_INSECURE = UUID.fromString(&quot;00001101-0000-1000-8000-00805F9B34FB&quot;)</code></h5>
 <p>The my uuid insecure.</p>
 <h5 id="-protected-string-name_secure-bluetoothsecure-"><code>protected String NAME_SECURE = &quot;BluetoothSecure&quot;</code></h5>
 <p>The name secure.</p>
@@ -119,14 +121,16 @@
 <h5 id="-final-static-int-bluetooth_enable_request-1-"><code>final static int BLUETOOTH_ENABLE_REQUEST = 1</code></h5>
 <p>The Constant BLUETOOTH_ENABLE_REQUEST.</p>
 <h5 id="-public-ketaibluetooth-papplet-_parent-"><code>public KetaiBluetooth(PApplet _parent)</code></h5>
-<p>Instantiates a new ketai bluetooth instance</p>
+<p>Instantiates a new ketai bluetooth instance </p>
+<p>the calling sketch/activity</p>
 <ul>
-<li><strong>Parameters:</strong> <code>_parent</code> — the calling sketch/activity</li>
+<li><strong>Parameters:</strong> <code>_parent</code> — </li>
 </ul>
 <h5 id="-public-void-setslipmode-boolean-_flag-"><code>public void setSLIPMode(boolean _flag)</code></h5>
-<p>Sets the sLIP mode(experimental).</p>
+<p>Sets the sLIP mode(experimental). </p>
+<p>the new sLIP mode</p>
 <ul>
-<li><strong>Parameters:</strong> <code>_flag</code> — the new sLIP mode</li>
+<li><strong>Parameters:</strong> <code>_flag</code> — </li>
 </ul>
 <h5 id="-public-boolean-isstarted-"><code>public boolean isStarted()</code></h5>
 <p>Checks if we&#39;ve started.</p>
@@ -144,12 +148,13 @@
 <li><strong>Returns:</strong> true, if we&#39;re discovering</li>
 </ul>
 <h5 id="-public-void-onactivityresult-int-requestcode-int-resultcode-intent-data-"><code>public void onActivityResult(int requestCode, int resultCode, Intent data)</code></h5>
-<p>On activity result.</p>
+<p>On activity result. </p>
+<p>the request code the result code the data from the activty result</p>
 <ul>
 <li><strong>Parameters:</strong><ul>
-<li><code>requestCode</code> — the request code</li>
-<li><code>resultCode</code> — the result code</li>
-<li><code>data</code> — the data from the activty result</li>
+<li><code>requestCode</code> — </li>
+<li><code>resultCode</code> — </li>
+<li><code>data</code> — </li>
 </ul>
 </li>
 </ul>
@@ -183,65 +188,89 @@
 <ul>
 <li><strong>Returns:</strong> the connected device names</li>
 </ul>
-<h5 id="-public-boolean-connecttodevicebyname-string-_name-"><code>public boolean connectToDeviceByName(String _name)</code></h5>
-<p>Connect to device by name.</p>
+<h5 id="-public-arraylist-string-getconnecteddevicelabel-"><code>public ArrayList&lt;String&gt; getConnectedDeviceLabel()</code></h5>
+<p>Gets the connected device composite label.</p>
 <ul>
-<li><strong>Parameters:</strong> <code>_name</code> — the _name</li>
+<li><strong>Returns:</strong> the connected device names</li>
+</ul>
+<h5 id="-public-arraylist-string-getconnecteddeviceaddresses-"><code>public ArrayList&lt;String&gt; getConnectedDeviceAddresses()</code></h5>
+<p>Gets the connected hardware addresses.</p>
+<ul>
+<li><strong>Returns:</strong> the connected device addresses</li>
+</ul>
+<h5 id="-public-boolean-disconnectdevice-string-device-"><code>public boolean disconnectDevice(String device)</code></h5>
+<p>Disconnects device.</p>
+<ul>
+<li><strong>Returns:</strong> True if connection was found and closed</li>
+</ul>
+<h5 id="-public-boolean-connecttodevicebyname-string-_name-"><code>public boolean connectToDeviceByName(String _name)</code></h5>
+<p>Connect to device by name. </p>
+<p>the _name</p>
+<ul>
+<li><strong>Parameters:</strong> <code>_name</code> — </li>
 <li><strong>Returns:</strong> true, if successful</li>
 </ul>
 <h5 id="-public-boolean-connectdevice-string-_hwaddress-"><code>public boolean connectDevice(String _hwAddress)</code></h5>
-<p>Connect device by hardware address (more reliable since HW addresses are supposed to be unique.</p>
+<p>Connect device by hardware address (more reliable since HW addresses are supposed to be unique. </p>
+<p>the _hw address</p>
 <ul>
-<li><strong>Parameters:</strong> <code>_hwAddress</code> — the _hw address</li>
+<li><strong>Parameters:</strong> <code>_hwAddress</code> — </li>
 <li><strong>Returns:</strong> true, if successful</li>
 </ul>
 <h5 id="-public-boolean-connectdeviceusingslip-string-_hwaddress-"><code>public boolean connectDeviceUsingSLIP(String _hwAddress)</code></h5>
-<p>Connect device using slip.</p>
+<p>Connect device using slip. </p>
+<p>the _hw address</p>
 <ul>
-<li><strong>Parameters:</strong> <code>_hwAddress</code> — the _hw address</li>
+<li><strong>Parameters:</strong> <code>_hwAddress</code> — </li>
 <li><strong>Returns:</strong> true, if successful</li>
 </ul>
 <h5 id="-public-boolean-connectdevice-bluetoothsocket-_socket-"><code>public boolean connectDevice(BluetoothSocket _socket)</code></h5>
-<p>Connect device.</p>
+<p>Connect device. </p>
+<p>the _socket</p>
 <ul>
-<li><strong>Parameters:</strong> <code>_socket</code> — the _socket</li>
+<li><strong>Parameters:</strong> <code>_socket</code> — </li>
 <li><strong>Returns:</strong> true, if successful</li>
 </ul>
 <h5 id="-public-void-discoverdevices-"><code>public void discoverDevices()</code></h5>
 <p>Discover devices.</p>
 <h5 id="-public-string-lookupaddressbyname-string-_name-"><code>public String lookupAddressByName(String _name)</code></h5>
-<p>Lookup address by name.</p>
+<p>Lookup address by name. </p>
+<p>the _name</p>
 <ul>
-<li><strong>Parameters:</strong> <code>_name</code> — the _name</li>
+<li><strong>Parameters:</strong> <code>_name</code> — </li>
 <li><strong>Returns:</strong> the string</li>
 </ul>
 <h5 id="-public-void-writetodevicename-string-_name-byte-data-"><code>public void writeToDeviceName(String _name, byte[] data)</code></h5>
-<p>Write to device name.</p>
+<p>Write to device name. </p>
+<p>the _name of the device/connection the data</p>
 <ul>
 <li><strong>Parameters:</strong><ul>
-<li><code>_name</code> — the _name of the device/connection</li>
-<li><code>data</code> — the data</li>
+<li><code>_name</code> — </li>
+<li><code>data</code> — </li>
 </ul>
 </li>
 </ul>
 <h5 id="-public-void-write-string-_deviceaddress-byte-data-"><code>public void write(String _deviceAddress, byte[] data)</code></h5>
-<p>Write data to a device through their hardware address</p>
+<p>Write data to a device through their hardware address </p>
+<p>the _device hardware address the data</p>
 <ul>
 <li><strong>Parameters:</strong><ul>
-<li><code>_deviceAddress</code> — the _device hardware address</li>
-<li><code>data</code> — the data</li>
+<li><code>_deviceAddress</code> — </li>
+<li><code>data</code> — </li>
 </ul>
 </li>
 </ul>
 <h5 id="-public-void-broadcast-byte-data-"><code>public void broadcast(byte[] data)</code></h5>
-<p>Send data to all conencted devices.</p>
+<p>Send data to all connected devices. </p>
+<p>the data</p>
 <ul>
-<li><strong>Parameters:</strong> <code>data</code> — the data</li>
+<li><strong>Parameters:</strong> <code>data</code> — </li>
 </ul>
 <h5 id="-protected-void-removeconnection-kbluetoothconnection-c-"><code>protected void removeConnection(KBluetoothConnection c)</code></h5>
-<p>Removes the connection.</p>
+<p>Removes the connection. </p>
+<p>the connection reference</p>
 <ul>
-<li><strong>Parameters:</strong> <code>c</code> — the connection reference</li>
+<li><strong>Parameters:</strong> <code>c</code> — </li>
 </ul>
 <h5 id="-public-void-makediscoverable-"><code>public void makeDiscoverable()</code></h5>
 <p>Make discoverable.</p>
@@ -260,11 +289,12 @@
 <h5 id="-private-string-msockettype-"><code>private String mSocketType</code></h5>
 <p>The m socket type.</p>
 <h5 id="-public-connectthread-bluetoothdevice-device-boolean-secure-"><code>public ConnectThread(BluetoothDevice device, boolean secure)</code></h5>
-<p>Instantiates a new connect thread.</p>
+<p>Instantiates a new connect thread. </p>
+<p>the device the secure</p>
 <ul>
 <li><strong>Parameters:</strong><ul>
-<li><code>device</code> — the device</li>
-<li><code>secure</code> — the secure</li>
+<li><code>device</code> — </li>
+<li><code>secure</code> — </li>
 </ul>
 </li>
 </ul>

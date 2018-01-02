@@ -39,6 +39,7 @@
     <li><a href="https://github.com/ketai/ketai/pulls" class="misc_link"><i class="fa fa-code"> Your Help</i></a></li>
     <li><a href="https://github.com/ketai/ketai/issues" class="misc_link"><i class="fa fa-comment-o"> Forum</i></a></li>
     <li><a href="https://twitter.com/ketailibrary" class="misc_link"><i class="fa fa-twitter"> Twitter</i></a></li>
+    <li><a href="https://www.mobileprocessing.org" class="misc_link"><i class="fa fa-book"> RAD Book </i></a></li>
   </div>
 </ul>
     </div>
@@ -70,6 +71,7 @@
     <li><a href="https://github.com/ketai/ketai/pulls" class="misc_link"><i class="fa fa-code"> Your Help</i></a></li>
     <li><a href="https://github.com/ketai/ketai/issues" class="misc_link"><i class="fa fa-comment-o"> Forum</i></a></li>
     <li><a href="https://twitter.com/ketailibrary" class="misc_link"><i class="fa fa-twitter"> Twitter</i></a></li>
+    <li><a href="https://www.mobileprocessing.org" class="misc_link"><i class="fa fa-book"> RAD Book </i></a></li>
   </div>
 </ul>
             <hr>
@@ -100,104 +102,271 @@
 <p>This example illustrates how to use Bluetooth Connection</p>
 <div class="link"><a href="BluetoothCursors.pde"><i class="fa fa-download fa-lg"></i> BluetoothCursors. pde</a></div>
 
-<pre><code>import ketai.sensors.*;
+<pre><code>/**
+ * &lt;p&gt;Ketai Library for Android: http://ketai.org&lt;/p&gt;
+ *
+ * &lt;p&gt;KetaiBluetooth wraps the Android Bluetooth RFCOMM Features:
+ * &lt;ul&gt;
+ * &lt;li&gt;Enables Bluetooth for sketch through android&lt;/li&gt;
+ * &lt;li&gt;Provides list of available Devices&lt;/li&gt;
+ * &lt;li&gt;Enables Discovery&lt;/li&gt;
+ * &lt;li&gt;Allows writing data to device&lt;/li&gt;
+ * &lt;/ul&gt;
+ * &lt;p&gt;Updated: 2012-05-18 Daniel Sauter/j.duran&lt;/p&gt;
+ */
 
+//required for BT enabling on startup
+import android.content.Intent;
+import android.os.Bundle;
 
-KetaiAudioInput mic;
-short[] data;
+import ketai.net.bluetooth.*;
+import ketai.ui.*;
+import ketai.net.*;
 
-void setup()
-{
-  orientation(LANDSCAPE);
-  mic = new KetaiAudioInput(this);
-  fill(255,0,0);
-  textSize(48);
+import oscP5.*;
+
+KetaiBluetooth bt;
+String info = &quot;&quot;;
+KetaiList klist;
+PVector remoteMouse = new PVector();
+
+ArrayList&lt;String&gt; devicesDiscovered = new ArrayList();
+boolean isConfiguring = true;
+String UIText;
+
+//********************************************************************
+// The following code is required to enable bluetooth at startup.
+//********************************************************************
+void onCreate(Bundle savedInstanceState) {
+  super.onCreate(savedInstanceState);
+  bt = new KetaiBluetooth(this);
 }
 
+void onActivityResult(int requestCode, int resultCode, Intent data) {
+  bt.onActivityResult(requestCode, resultCode, data);
+}
+
+//********************************************************************
+
+void setup()
+{   
+  orientation(PORTRAIT);
+  background(78, 93, 75);
+  stroke(255);
+  textSize(24);
+
+  //start listening for BT connections
+  bt.start();
+
+  UIText =  &quot;d - discover devices\n&quot; +
+    &quot;b - make this device discoverable\n&quot; +
+    &quot;c - connect to device\n     from discovered list.\n&quot; +
+    &quot;p - list paired devices\n&quot; +
+    &quot;i - Bluetooth info&quot;;
+}
 
 void draw()
 {
-  background(128);
-  if (data != null)
-  {  
-    for (int i = 0; i &lt; data.length; i++)
+  if (isConfiguring)
+  {
+    ArrayList&lt;String&gt; names;
+    background(78, 93, 75);
+
+    //based on last key pressed lets display
+    //  appropriately
+    if (key == &#39;i&#39;)
+      info = getBluetoothInformation();
+    else
     {
-      if(i != data.length-1)
-        line(i, map(data[i], -32768, 32767,height,0), i+1, map(data[i+1], -32768, 32767,height,0));
+      if (key == &#39;p&#39;)
+      {
+        info = &quot;Paired Devices:\n&quot;;
+        names = bt.getPairedDeviceNames();
+      }
+      else
+      {
+        info = &quot;Discovered Devices:\n&quot;;
+        names = bt.getDiscoveredDeviceNames();
+      }
+
+      for (int i=0; i &lt; names.size(); i++)
+      {
+        info += &quot;[&quot;+i+&quot;] &quot;+names.get(i).toString() + &quot;\n&quot;;
+      }
     }
+    text(UIText + &quot;\n\n&quot; + info, 5, 90);
+  }
+  else
+  {
+    background(78, 93, 75);
+    pushStyle();
+    fill(255);
+    ellipse(mouseX, mouseY, 20, 20);
+    fill(0, 255, 0);
+    stroke(0, 255, 0);
+    ellipse(remoteMouse.x, remoteMouse.y, 20, 20);    
+    popStyle();
   }
 
-  if(mic.isActive())
-    text(&quot;READING MIC&quot;, width/2, height/2);
-  else
-    text(&quot;NOT READING MIC&quot;, width/2, height/2);
-
+  drawUI();
 }
 
 
-void onAudioEvent(short[] _data)
+//Call back method to manage data received
+void onBluetoothDataEvent(String who, byte[] data)
 {
-  data= _data;
+  if (isConfiguring)
+    return;
+
+  //KetaiOSCMessage is the same as OscMessage
+  //   but allows construction by byte array
+  KetaiOSCMessage m = new KetaiOSCMessage(data);
+  if (m.isValid())
+  {
+    if (m.checkAddrPattern(&quot;/remoteMouse/&quot;))
+    {
+      if (m.checkTypetag(&quot;ii&quot;))
+      {
+        remoteMouse.x = m.get(0).intValue();
+        remoteMouse.y = m.get(1).intValue();
+      }
+    }
+  }
 }
 
-void mousePressed()
+String getBluetoothInformation()
 {
-  if (mic.isActive())
-    mic.stop(); 
-  else
-    mic.start();
+  String btInfo = &quot;Server Running: &quot;;
+  btInfo += bt.isStarted() + &quot;\n&quot;;
+  btInfo += &quot;Discovering: &quot; + bt.isDiscovering() + &quot;\n&quot;;
+  btInfo += &quot;Device Discoverable: &quot;+bt.isDiscoverable() + &quot;\n&quot;;
+  btInfo += &quot;\nConnected Devices: \n&quot;;
+
+  ArrayList&lt;String&gt; devices = bt.getConnectedDeviceNames();
+  for (String device: devices)
+  {
+    btInfo+= device+&quot;\n&quot;;
+  }
+
+  return btInfo;
 }
 </code></pre><div class="link"><a href="UI.pde"><i class="fa fa-download fa-lg"></i> UI. pde</a></div>
 
-<pre><code>import ketai.sensors.*;
+<pre><code>/*  UI-related functions */
 
-
-KetaiAudioInput mic;
-short[] data;
-
-void setup()
-{
-  orientation(LANDSCAPE);
-  mic = new KetaiAudioInput(this);
-  fill(255,0,0);
-  textSize(48);
-}
-
-
-void draw()
-{
-  background(128);
-  if (data != null)
-  {  
-    for (int i = 0; i &lt; data.length; i++)
-    {
-      if(i != data.length-1)
-        line(i, map(data[i], -32768, 32767,height,0), i+1, map(data[i+1], -32768, 32767,height,0));
-    }
-  }
-
-  if(mic.isActive())
-    text(&quot;READING MIC&quot;, width/2, height/2);
-  else
-    text(&quot;NOT READING MIC&quot;, width/2, height/2);
-
-}
-
-
-void onAudioEvent(short[] _data)
-{
-  data= _data;
-}
 
 void mousePressed()
 {
-  if (mic.isActive())
-    mic.stop(); 
+  //keyboard button -- toggle virtual keyboard
+  if (mouseY &lt;= 50 &amp;&amp; mouseX &gt; 0 &amp;&amp; mouseX &lt; width/3)
+    KetaiKeyboard.toggle(this);
+  else if (mouseY &lt;= 50 &amp;&amp; mouseX &gt; width/3 &amp;&amp; mouseX &lt; 2*(width/3)) //config button
+  {
+    isConfiguring=true;
+  }
+  else if (mouseY &lt;= 50 &amp;&amp; mouseX &gt;  2*(width/3) &amp;&amp; mouseX &lt; width) // draw button
+  {
+    if (isConfiguring)
+    {
+      //if we&#39;re entering draw mode then clear canvas
+      background(78, 93, 75);
+      isConfiguring=false;
+    }
+  }
+}
+
+void mouseDragged()
+{
+  if (isConfiguring)
+    return;
+
+  //send data to everyone
+  //  we could send to a specific device through
+  //   the writeToDevice(String _devName, byte[] data)
+  //  method.
+  OscMessage m = new OscMessage(&quot;/remoteMouse/&quot;);
+  m.add(mouseX);
+  m.add(mouseY);
+
+  bt.broadcast(m.getBytes());
+  ellipse(mouseX, mouseY, 20, 20);
+}
+
+public void keyPressed() {
+  if (key ==&#39;c&#39;)
+  {
+    //If we have not discovered any devices, try prior paired devices
+    if (bt.getDiscoveredDeviceNames().size() &gt; 0)
+      klist = new KetaiList(this, bt.getDiscoveredDeviceNames());
+    else if (bt.getPairedDeviceNames().size() &gt; 0)
+      klist = new KetaiList(this, bt.getPairedDeviceNames());
+  }
+  else if (key == &#39;d&#39;)
+  {
+    bt.discoverDevices();
+  }
+  else if (key == &#39;x&#39;)
+    bt.stop();
+  else if (key == &#39;b&#39;)
+  {
+    bt.makeDiscoverable();
+  }
+  else if (key == &#39;s&#39;)
+  {
+    bt.start();
+  }
+}
+
+
+void drawUI()
+{
+  //Draw top shelf UI buttons
+
+  pushStyle();
+  fill(0);
+  stroke(255);
+  rect(0, 0, width/3, 50);
+
+  if (isConfiguring)
+  {
+    noStroke();
+    fill(78, 93, 75);
+  }
   else
-    mic.start();
+    fill(0);
+
+  rect(width/3, 0, width/3, 50);
+
+  if (!isConfiguring)
+  {  
+    noStroke();
+    fill(78, 93, 75);
+  }
+  else
+  {
+    fill(0);
+    stroke(255);
+  }
+  rect((width/3)*2, 0, width/3, 50);
+
+  fill(255);
+  text(&quot;Keyboard&quot;, 5, 30); 
+  text(&quot;Bluetooth&quot;, width/3+5, 30); 
+  text(&quot;Interact&quot;, width/3*2+5, 30); 
+
+  popStyle();
+}
+
+void onKetaiListSelection(KetaiList klist)
+{
+  String selection = klist.getSelection();
+  bt.connectToDeviceByName(selection);
+
+  //dispose of list for now
+  klist = null;
 }
 </code></pre><!-- * **Screenshot** -->
-<img src="/assets/thumbnails/c2a5de68ad3cbc9fc21201be8a5a4245.png" width="480" height="NaN"></img>
+<img src="/assets/thumbnails/820559963e349ba026fc5f4feeca0ac7.png" width="480" height="800"></img>
           </div>
         </div>
       </div>
