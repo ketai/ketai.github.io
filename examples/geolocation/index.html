@@ -35,7 +35,9 @@
     <li><a href="/reference/">Reference</a></li>
     <li><a href="/download/">Download</a></li>
     <li><a href="/exhibition/">Exhibition</a></li><br/>
-    <script src="/assets/scripts/google_search.js"></script><gcse:search enableAutoComplete="true"></gcse:search><br/>
+    <script src="/assets/scripts/google_search.js"></script><gcse:search enableAutoComplete="true"></gcse:search>
+    
+    <br/>
     <li><a href="https://github.com/ketai/library" class="misc_link"><i class="fa fa-github"> Github</i></a></li>
     <li><a href="https://github.com/ketai/ketai/pulls" class="misc_link"><i class="fa fa-code"> Your Help</i></a></li>
     <li><a href="https://github.com/ketai/ketai/issues" class="misc_link"><i class="fa fa-comment-o"> Forum</i></a></li>
@@ -68,7 +70,9 @@
     <li><a href="/reference/">Reference</a></li>
     <li><a href="/download/">Download</a></li>
     <li><a href="/exhibition/">Exhibition</a></li><br/>
-    <script src="/assets/scripts/google_search.js"></script><gcse:search enableAutoComplete="true"></gcse:search><br/>
+    <script src="/assets/scripts/google_search.js"></script><gcse:search enableAutoComplete="true"></gcse:search>
+    
+    <br/>
     <li><a href="https://github.com/ketai/library" class="misc_link"><i class="fa fa-github"> Github</i></a></li>
     <li><a href="https://github.com/ketai/ketai/pulls" class="misc_link"><i class="fa fa-code"> Your Help</i></a></li>
     <li><a href="https://github.com/ketai/ketai/issues" class="misc_link"><i class="fa fa-comment-o"> Forum</i></a></li>
@@ -105,6 +109,11 @@
 &nbsp;- Uses GPS location data (latitude, longitude, altitude (if available)<br>
 &nbsp;- Updates if location changes by 1 meter, or every 10 seconds<br>
 &nbsp;- If unavailable, defaults to system provider (cell tower or WiFi network location)<br></p>
+<p>Syntax: <br></p>
+<pre><code>onLocationEvent(latitude, longitude, altitude)
+onLocationEvent(latitude, longitude)
+onLocationEvent(latitude, longitude, altitude)
+</code></pre><hr>
 <div class="link"><a href="Geolocation.pde"><i class="fa fa-download fa-lg"></i> Geolocation. pde</a></div>
 
 <pre><code>import ketai.sensors.*; 
@@ -140,14 +149,16 @@ void onLocationEvent(double _latitude, double _longitude, double _altitude)
   altitude = _altitude;
   println(&quot;lat/lon/alt: &quot; + latitude + &quot;/&quot; + longitude + &quot;/&quot; + altitude);
 }
-</code></pre> <!-- * **Screenshot** -->
-<img src="/assets/thumbnails/49c71c8040cdebf252d09e3bd2d30eb8.png" width="800" height="480"></img>
+</code></pre> <!-- * **Screenshot** --><img src="/assets/thumbnails/49c71c8040cdebf252d09e3bd2d30eb8.png" width="800" height="480"></img>
           </div>
         </div>
       </div>
     </div>
   </div><script src="/assets/scripts/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script><script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="/assets/scripts/jquery-1.7.2.min.js"><\/script>')</script>
   <script src="/assets/scripts/classie.js"></script>
   <script src="/assets/scripts/menu.js"></script>
